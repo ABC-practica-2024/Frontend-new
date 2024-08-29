@@ -1,8 +1,10 @@
 import LoginForm from "../components/LoginForm";
+import TopBar from "../layouts/TopBar.jsx";
 
 export default function LoginPage() {
     return (
         <div>
+            <TopBar />
             <h2>Login</h2>
             <LoginForm />
             <p>
