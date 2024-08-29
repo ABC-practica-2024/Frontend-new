@@ -12,7 +12,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.content {
+    flex-grow: 1; /* Face conținutul să ocupe tot spațiul rămas */
+    margin-left: 80px; /* Evită ca sidebar-ul să suprapună conținutul */
+    margin-top: 100px;
+    padding: 20px; /* Adaugă puțin padding pentru a nu fi lipit de margini */
+}
+.root-layout {
+    display: flex;
+    height: 100vh; /* Ocupă întreaga înălțime a ferestrei */
+}
 a {
     font-weight: 500;
     color: #646cff;

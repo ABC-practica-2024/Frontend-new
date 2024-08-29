@@ -1,9 +1,20 @@
 import React from 'react';
+import './Button.css';
 
-export default function Button ({label, onClick, styleType='primary',...props}){
+export default function Button({ label, styleType }) {
+    let className = '';
+
+    if (styleType === 'auth') {
+        className = 'button-auth';
+    } else if (styleType === 'register') {
+        className = 'button-register';
+    }else if (styleType === 'sidebar') {
+        className = 'button-sidebar';
+    }
+
     return (
-        <button className={`button $ {styleType}`}
-                onClick={onClick}
-            {...props}>{label}</button>
+        <button className={className}>
+            {label}
+        </button>
     );
 }
