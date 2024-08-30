@@ -100,6 +100,12 @@ Follow these steps in order to install and run the project.
     ```
 4. Open [http://localhost:5173/](http://localhost:5173/) to view it in your browser.
 
+Additionally, to start the Tailwind CLI build process run
+
+```sh
+npx tailwindcss -i ./src/index.css -o ./src/output.css --watch
+```
+
 _(Note if the port **5173** is already being used, `Vite` will automatically try the next available port so this may not be the actual port the server ends up listening on.)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
