@@ -1,96 +1,122 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../api/authService.jsx";
+import Input from "./UI/Input.jsx";
+import Button from "./UI/Button.jsx";
+import Card from "./UI/Card.jsx";
 
 export default function RegisterForm() {
-    const [userData, setUserData] = useState({
-        username: "",
-        password: "",
-        email: "",
-        firstName: "",
-        lastName: "",
-        role: "arheolog",
-    });
-    const [error, setError] = useState("");
-    const navigate = useNavigate();
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [role, setRole] = useState("archeologist");
 
-    const handleChange = (e) => {
-        setUserData({
-            ...userData,
-            [e.target.name]: e.target.value,
-        });
-    };
+    const [matchingPasswordsError, setMatchingPasswordsError] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (password !== confirmPassword) {
+            setMatchingPasswordsError(true);
+            return;
+        }
+        const userData = {
+            username,
+            password,
+            email,
+            firstName,
+            lastName,
+            role,
+        };
+
         try {
             await register(userData);
             navigate("/login");
         } catch (err) {
-            setError("Registration failed");
+            // ... todo handle error
         }
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Username:</label>
-                <input
-                    type="text"
-                    name="username"
-                    value={userData.username}
-                    onChange={handleChange}
+            <Input
+                required
+                label="Username"
+                id="username"
+                value={username}
+                onChange={setUsername}
+            />
+            <Input
+                required
+                label="Password"
+                id="password"
+                type="password"
+                value={password}
+                onChange={setPassword}
+            />
+            <Input
+                required
+                label="Confirm password"
+                id="confirm-password"
+                type="password"
+                value={confirmPassword}
+                onChange={setConfirmPassword}
+            />
+            <Input
+                required
+                label="Email"
+                id="email"
+                type="email"
+                value={email}
+                onChange={setEmail}
+            />
+            <div className="flex flex-row gap-4 justify-between">
+                <Input
+                    required
+                    label="First name"
+                    id="firstname"
+                    value={firstName}
+                    onChange={setFirstName}
+                />
+                <Input
+                    required
+                    label="Last name"
+                    id="lastname"
+                    value={lastName}
+                    onChange={setLastName}
                 />
             </div>
-            <div>
-                <label>Password:</label>
-                <input
-                    type="password"
-                    name="password"
-                    value={userData.password}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={userData.email}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>First Name:</label>
-                <input
-                    type="text"
-                    name="firstName"
-                    value={userData.firstName}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Last Name:</label>
-                <input
-                    type="text"
-                    name="lastName"
-                    value={userData.lastName}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Role:</label>
-                <select
-                    name="role"
-                    value={userData.role}
-                    onChange={handleChange}
+            <div className="flex flex-row gap-4 justify-around">
+                <Button
+                    outlined={role === "archeologist" ? true : false}
+                    styleType={role === "archeologist" ? "warning" : "default"}
+                    onClick={() => setRole("archeologist")}
+                    type="button"
                 >
-                    <option value="arheolog">Arheolog</option>
-                    <option value="admin">Admin</option>
-                </select>
+                    Archeologist
+                </Button>
+                <Button
+                    outlined={role === "lab-worker" ? true : false}
+                    styleType={role === "lab-worker" ? "success" : "default"}
+                    onClick={() => setRole("lab-worker")}
+                    type="button"
+                >
+                    Lab Worker
+                </Button>
             </div>
-            {error && <p>{error}</p>}
-            <button type="submit">Register</button>
+            {matchingPasswordsError && (
+                <Card className="text-red-500 border-red-500 bg-red-50">
+                    Passwords do not match!
+                </Card>
+            )}
+
+            {/* todo add photo upload field */}
+            <Button type="submit" outlined styleType="primary">
+                Register
+            </Button>
         </form>
     );
 }

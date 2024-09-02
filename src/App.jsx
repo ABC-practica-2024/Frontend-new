@@ -4,12 +4,15 @@ import RegisterPage from "./pages/RegisterPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import EnableUserPage from "./pages/EnableUserPage";
 import RootLayout from "./layouts/RootLayout";
+import Components from "./pages/Components";
+import UserLayout from "./layouts/UserLayout";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<RootLayout />}>
+                <Route path="/components" element={<Components />} />
+                <Route path="/" element={<UserLayout />}>
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />

@@ -1,0 +1,17 @@
+.login-page {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page .button.submit {
+    padding: 9px;
+}
+
+.login-page .button span {
+    font-size: 36px;
+}

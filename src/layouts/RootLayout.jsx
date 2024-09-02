@@ -1,23 +1,13 @@
 import { Outlet } from "react-router-dom";
-import TopBar from "../components/navigation/TopBar.jsx";
-import Sidebar from "../components/navigation/Sidebar.jsx"; // Corectare pentru import
+import TopBar from "../components/navigation/TopBar";
 
-import { useState } from 'react';
-
-export default function RootLayout() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
+function RootLayout() {
     return (
         <div className="root-layout">
             <TopBar />
-            <div className="content">
-                <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-                <Outlet />
-            </div>
+            <Outlet />
         </div>
     );
 }
+
+export default RootLayout;

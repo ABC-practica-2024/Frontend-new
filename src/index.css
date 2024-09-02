@@ -5,17 +5,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
     overflow-x: clip;
+    height: 100%;
 }
 
-#root,
 .root-layout,
 .user-layout {
-    width: 100vw;
-    min-height: 100vh;
+    height: 100%;
 }
 
 .content {
