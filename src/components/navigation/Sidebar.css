@@ -1,21 +1,18 @@
 .sidebar {
-    height: 100vh;
-    background-color: #FFFFFF;
-    color: #fff;
-    position: fixed;
-    top: 120px;
-    left: 0;
-    transition: width 0.3s;
-    z-index: 1000;
-    overflow: hidden; /* Ascunde conținutul care depășește dimensiunile */
+    height: calc(100vh - 64px);
+    background-color: #fff;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 16px;
 }
 
-.sidebar.closed {
-    width: 50px;
-}
-
-.sidebar.open {
-    width: 180px;
+.sidebar-items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
 }
 
 .toggle-button {
@@ -31,7 +28,7 @@
 .sidebar-items {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px; /* Adaugă un mic spațiu între butonul de toggle și elementele din sidebar */
+    /* margin-top: 20px; Adaugă un mic spațiu între butonul de toggle și elementele din sidebar */
 }
 
 .sidebar-button {
@@ -45,106 +42,8 @@
     font-size: 16px;
 }
 
-.sidebar-button:hover {
-    background-color: #555;
+.sidebar .upper-portion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
-
-.rectangle-17 {
-    position: absolute;
-    width: 50px;
-    height: 838px;
-    left: 30px;
-    top: 119px;
-    background: #FFFFFF;
-    border-radius: 20px;
-}
-
-.sidebar-item {
-    position: relative;
-    margin-bottom: 8px;
-}
-
-.rectangle-16,
-.rectangle-23,
-.rectangle-22,
-.rectangle-18,
-.rectangle-19,
-.rectangle-20{
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid #3D3D3D;
-    border-radius: 20px;
-}
-
-.rectangle-21 {
-    margin-top: 160px; /* Poziționează butonul "Settings" jos de tot */
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid #3D3D3D;
-    border-radius: 20px;
-    transition: width 0.3s;
-}
-
-.rectangle-16.expanded,
-.rectangle-23.expanded,
-.rectangle-22.expanded,
-.rectangle-18.expanded,
-.rectangle-19.expanded,
-.rectangle-20.expanded,
-.rectangle-21.expanded {
-    width: 150px; /* Ajustează această valoare pentru a se potrivi cu lățimea dorită când sidebar-ul este extins */
-    transition: width 0.3s;
-}
-
-.rectangle-16.expanded .button-label,
-.rectangle-23.expanded .button-label,
-.rectangle-22.expanded .button-label,
-.rectangle-18.expanded .button-label,
-.rectangle-19.expanded .button-label,
-.rectangle-20.expanded .button-label,
-.rectangle-21.expanded .button-label {
-    display: inline-block; /* Asigură că textul apare lângă iconiță */
-}
-
-.rectangle-16 {
-    top: 119px;
-}
-
-.rectangle-23 {
-    top: 177px;
-}
-
-.rectangle-22 {
-    top: 236px;
-}
-
-.rectangle-18 {
-    top: 293px;
-}
-
-.rectangle-19 {
-    top: 351px;
-}
-
-.rectangle-20 {
-    top: 409px;
-}
-
-.rectangle-21 {
-    top: 907px;
-}
-
-.icon {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 10px;
-    top: 12.5%;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-}
-

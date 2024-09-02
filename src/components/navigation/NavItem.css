@@ -1,0 +1,17 @@
+.nav-item-container {
+    gap: 16px;
+    /* justify-content: space-between; */
+    padding: 16px;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.nav-item-container span {
+    font-size: 32px;
+    display: block;
+}
+
+.nav-item-container label {
+    font-family: "Lufga", sans-serif;
+}

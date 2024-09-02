@@ -1,24 +1,29 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './TopBar.css';
-import Button from "../Button.jsx";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../UI/Button.jsx";
+import logoImg from "../../assets/logo.png";
+import Card from "../UI/Card.jsx";
 
 export default function TopBar() {
+    const navigate = useNavigate();
+
     return (
-        <div className="topbar">
-            <div className="logo">
-                <img src="/src/utils/img.png" alt="Logo" className="logo-image" />
+        <Card className="m-4 flex items-center justify-between rounded-[20px] px-5 py-4">
+            <Link to="/">
+                <img src={logoImg} alt="Logo" className="h-14" />
+            </Link>
+
+            <div className="flex gap-5">
+                <Button onClick={() => navigate("/register")}>Register</Button>
+
+                <Button
+                    outlined
+                    styleType="primary"
+                    onClick={() => navigate("/login")}
+                >
+                    Login
+                </Button>
             </div>
-            <div className="nav-buttons">
-                <NavLink to="/login">
-                    <Button label="Autentificare" styleType="auth" />
-                </NavLink>
-                <div className="rectangle-register">
-                    <NavLink to="/register">
-                        <Button label="Inregistrare" styleType="register" />
-                    </NavLink>
-                </div>
-            </div>
-        </div>
+        </Card>
     );
 }
