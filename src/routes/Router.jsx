@@ -7,6 +7,7 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
+import AdminLayout from "../layouts/AdminLayout.jsx";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -44,7 +45,7 @@ const userRouter = createBrowserRouter([
 const adminRouter = createBrowserRouter([
     {
         path: "/",
-        element: <RootLayout />, // todo create AdminLayout
+        element: <AdminLayout />,
         children: [{}],
     },
 ]);
