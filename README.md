@@ -152,6 +152,10 @@ Defines the structural components of the application, such as headers, footers, 
 
 Contains components that represent the main pages of the application, with each component typically corresponding to a route.
 
+#### `routes`
+
+Contains the routes customized by the user type and role.
+
 #### `utils`
 
 Contains utility functions and helpers that handle common tasks, such as data formatting, calculations, and other general operations, which are utilized across the application.
