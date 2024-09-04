@@ -8,6 +8,7 @@ import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
 import DashboardPage from "../pages/DashboardPage";
+import SitesPage from "../pages/SitesPage";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const userRouter = createBrowserRouter([
             {
                 path: "/",
                 element: <DashboardPage />,
+            },            
+            {
+                path: "/sites",
+                element: <SitesPage />,
             },
         ],
     },
