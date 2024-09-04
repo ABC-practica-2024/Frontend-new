@@ -2,7 +2,7 @@ import { useState } from "react";
 import tempImg from "../assets/Temp.png";
 //import { whatever } from "../api/whatever";
 
-const situri_mock = [
+const sites_mock = [
 	{
 		image: tempImg,
 		siteName: "Sit Peana",
@@ -113,12 +113,12 @@ const SiteCard = ({ image, siteName, location, role, description }) => {
 };
 
 export default function SitesPage() {
-	const [situriMock, setSituriMock] = useState(situri_mock);
+	const [sites, setSites] = useState(sites_mock);
 
 	return (
 		<div className="p-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-			{situriMock.map((sit,index) => (
-				<SiteCard image={sit.image} siteName={sit.siteName} location={sit.location} role={sit.role} description={sit.description} key={index}/>
+			{sites.map((site,index) => (
+				<SiteCard image={site.image} siteName={site.siteName} location={site.location} role={site.role} description={site.description} key={index}/>
 			))}
 		</div>
 	);
