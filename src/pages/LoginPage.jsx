@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../api/authService.jsx";
 import Input from "../components/UI/Input.jsx";
 import Button from "../components/UI/Button.jsx";
 import FormLayout from "../layouts/FormLayout.jsx";
 import "./LoginPage.css";
+import UserContext from "../contexts/UserContext.jsx";
 
 export default function LoginPage() {
     const [username, setUsername] = useState("");
@@ -12,16 +13,19 @@ export default function LoginPage() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = async (event) => {
+    const { login } = useContext(UserContext);
+
+    function handleSubmit(event) {
         event.preventDefault();
-        try {
-            const data = await login({ username, password });
-            localStorage.setItem("jwt", data.token);
-            navigate("/dashboard");
-        } catch (err) {
-            setError("Invalid username or password");
-        }
-    };
+
+        login(username, password)
+            .then(() => {
+                navigate("/");
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
 
     return (
         <div className="login-page h-full ">

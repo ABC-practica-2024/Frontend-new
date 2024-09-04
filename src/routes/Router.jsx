@@ -7,7 +7,7 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
-import AdminLayout from "../layouts/AdminLayout.jsx";
+import DashboardPage from "../pages/DashboardPage";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -38,15 +38,29 @@ const userRouter = createBrowserRouter([
     {
         path: "/",
         element: <UserLayout />,
-        children: [{}],
+        children: [
+            {
+                path: "/",
+                element: <DashboardPage />,
+            },
+        ],
     },
 ]);
 
 const adminRouter = createBrowserRouter([
     {
         path: "/",
-        element: <AdminLayout />,
-        children: [{}],
+        element: <RootLayout />, // todo create AdminLayout
+        children: [
+            {
+                path: "/",
+                element: (
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                ),
+            },
+        ],
     },
 ]);
 
