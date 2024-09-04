@@ -1,42 +1,36 @@
-const API_BASE_URL = '/api/v1';
+import axios from 'axios';
+
+const BASE_URL = 'http://pd-structuri.ro:8081';
+
+const API_BASE_URL = `${BASE_URL}/api/v1`;
 
 // GET /api/v1/site
-export async function getSites() {
-    const response = await fetch(`${API_BASE_URL}/site`);
-    return response.json();
+export const getSites = async () => {
+    const response = await axios.get(`${API_BASE_URL}/site`);
+    return response.data;
 }
 
 // GET /api/v1/site/{id}
-export async function getSiteById(siteId) {
-    const response = await fetch(`${API_BASE_URL}/site/${siteId}`);
-    return response.json();
+export const getSiteById = async (siteId) => {
+    const response = await axios.get(`${API_BASE_URL}/site/${siteId}`);
+    return response.data;
 }
 
 // POST /api/v1/site
-export async function createSite(site) {
-    const response = await fetch(`${API_BASE_URL}/site`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(site),
-    });
-    return response.json();
+export const createSite = async (site) => {
+    const response = await axios.post(`${API_BASE_URL}/site`, site);
+    return response.data;
 }
 
 // PUT /api/v1/site
-export async function updateSite(site) {
-    const response = await fetch(`${API_BASE_URL}/site`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(site),
-    });
-    return response.json();
+export const updateSite = async (site) => {
+    const response = await axios.put(`${API_BASE_URL}/site`, site);
+    return response.data;
 }
 
 // DELETE /api/v1/site/{id}
-export async function deleteSite(siteId) {
-    const response = await fetch(`${API_BASE_URL}/site/${siteId}`, {
-        method: 'DELETE',
-    });
-    return response.json();
+export const deleteSite = async (siteId) => {
+    const response = await axios.delete(`${API_BASE_URL}/site/${siteId}`);
+    return response.data;
 }
 
