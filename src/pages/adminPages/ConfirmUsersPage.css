@@ -1,0 +1,65 @@
+.user-approval {
+    font-family: Lufga, sans-serif;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    background: white;
+
+    gap: 8px;
+}
+
+.user-item img {
+    border-radius: 19px;
+    height: 120px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px;
+    height: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.user-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+}
+
+.user-actions button:hover {
+    background: #f6f6f6;
+}

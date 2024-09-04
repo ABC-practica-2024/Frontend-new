@@ -12,7 +12,7 @@ export default function RegisterForm() {
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [role, setRole] = useState("ARHEO");
+    const [role, setRole] = useState("archeologist");
 
     const [matchingPasswordsError, setMatchingPasswordsError] = useState(false);
     const navigate = useNavigate();
@@ -91,17 +91,17 @@ export default function RegisterForm() {
             </div>
             <div className="flex flex-row gap-4 justify-around">
                 <Button
-                    outlined={role === "ARHEO" ? true : false}
-                    styleType={role === "ARHEO" ? "warning" : "default"}
-                    onClick={() => setRole("ARHEO")}
+                    outlined={role === "archeologist" ? true : false}
+                    styleType={role === "archeologist" ? "warning" : "default"}
+                    onClick={() => setRole("archeologist")}
                     type="button"
                 >
                     Archeologist
                 </Button>
                 <Button
-                    outlined={role === "LABWORKER" ? true : false}
-                    styleType={role === "LABWORKER" ? "success" : "default"}
-                    onClick={() => setRole("LABWORKER")}
+                    outlined={role === "lab-worker" ? true : false}
+                    styleType={role === "lab-worker" ? "success" : "default"}
+                    onClick={() => setRole("lab-worker")}
                     type="button"
                 >
                     Lab Worker

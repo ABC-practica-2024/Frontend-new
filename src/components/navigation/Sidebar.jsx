@@ -13,13 +13,11 @@ export default function Sidebar() {
         <aside className={`sidebar ${isOpen ? "open" : undefined}`}>
             <ul className="sidebar-items">
                 <div className="upper-portion">
-                    <li className="sidebar-item">
-                        <NavItem
-                            isOpen={isOpen}
-                            icon={isOpen ? "chevron_left" : "chevron_right"}
-                            onClick={toggleSidebar}
-                        />
-                    </li>
+                    <NavItem
+                        isOpen={isOpen}
+                        icon={isOpen ? "chevron_left" : "chevron_right"}
+                        onClick={toggleSidebar}
+                    />
                     <NavItem
                         to={"/dashboard"}
                         isOpen={isOpen}

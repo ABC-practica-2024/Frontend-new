@@ -1,6 +1,5 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { login } from "../api/authService";
-import { useNavigate } from "react-router-dom";
 
 const UserContext = createContext({
     username: "",
@@ -20,13 +19,6 @@ export function UserContextProvider({ children }) {
     const [profilePicture, setProfilePicture] = useState("");
     const [role, setRole] = useState("");
 
-    useEffect(() => {
-        const localStorageToken = localStorage.getItem("jwt");
-        if (localStorageToken) {
-            setToken(localStorageToken);
-        }
-    }, []);
-
     const isLoggedIn = token !== null;
 
     return (
@@ -37,17 +29,14 @@ export function UserContextProvider({ children }) {
                 isLoggedIn,
                 role,
                 profilePicture,
-                login: async (username, password) => {
-                    const response = await login(username, password);
+                login: async (credentials) => {
+                    const response = await login(credentials);
                     const token = response.data;
                     // todo get user data from decrypted token
                     setToken(token);
-                    localStorage.setItem("jwt", token);
-                    
                 },
                 logout: () => {
                     setToken(null);
-                    localStorage.removeItem("jwt");
                 },
             }}
         >

@@ -7,7 +7,8 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
-import DashboardPage from "../pages/DashboardPage";
+import AdminLayout from "../layouts/AdminLayout.jsx";
+import ConfirmUsersPage from "../pages/adminPages/ConfirmUsersPage.jsx";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -38,33 +39,26 @@ const userRouter = createBrowserRouter([
     {
         path: "/",
         element: <UserLayout />,
-        children: [
-            {
-                path: "/",
-                element: <DashboardPage />,
-            },
-        ],
+        children: [{}],
     },
 ]);
 
 const adminRouter = createBrowserRouter([
     {
         path: "/",
-        element: <RootLayout />, // todo create AdminLayout
+        element: <AdminLayout />,
         children: [
             {
-                path: "/",
-                element: (
-                    <div>
-                        <h1>Admin Dashboard</h1>
-                    </div>
-                ),
-            },
+                path: "/confirm-users",
+                element: <ConfirmUsersPage />,
+            }
         ],
     },
 ]);
 
 export default function Router() {
+    return <RouterProvider router={adminRouter} />;
+
     const { isLoggedIn, role } = useContext(UserContext);
 
     if (!isLoggedIn) {
