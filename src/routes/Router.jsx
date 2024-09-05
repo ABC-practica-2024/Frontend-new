@@ -8,43 +8,48 @@ import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
 import DashboardPage from "../pages/DashboardPage";
+import OpenNewSitePage from "../pages/OpenNewSitePage";
 
 const visitorRouter = createBrowserRouter([
-    {
-        path: "/",
-        element: <RootLayout />,
-        children: [
-            {
-                path: "/login",
-                element: <LoginPage />,
-            },
-            {
-                path: "/register",
-                element: <RegisterPage />,
-            },
-            {
-                path: "/reset-password",
-                element: <ResetPasswordPage />,
-            },
-            {
-                path: "/enable/:token",
-                element: <EnableUserPage />,
-            },
-        ],
-    },
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
+      {
+        path: "/reset-password",
+        element: <ResetPasswordPage />,
+      },
+      {
+        path: "/enable/:token",
+        element: <EnableUserPage />,
+      },
+    ],
+  },
 ]);
 
 const userRouter = createBrowserRouter([
-    {
-        path: "/",
-        element: <UserLayout />,
-        children: [
-            {
-                path: "/",
-                element: <DashboardPage />,
-            },
-        ],
-    },
+  {
+    path: "/",
+    element: <UserLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardPage />,
+      },
+      {
+        path: "/new",
+        element: <OpenNewSitePage />,
+      },
+    ],
+  },
 ]);
 
 const adminRouter = createBrowserRouter([

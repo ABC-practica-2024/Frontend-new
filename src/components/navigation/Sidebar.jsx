@@ -10,34 +10,33 @@ export default function Sidebar() {
     };
 
     return (
-        <aside className={`sidebar ${isOpen ? "open" : undefined}`}>
-            <ul className="sidebar-items">
-                <div className="upper-portion">
-                    <li className="sidebar-item">
-                        <NavItem
-                            isOpen={isOpen}
-                            icon={isOpen ? "chevron_left" : "chevron_right"}
-                            onClick={toggleSidebar}
-                        />
-                    </li>
-                    <NavItem
-                        to={"/dashboard"}
-                        isOpen={isOpen}
-                        icon="space_dashboard"
-                    >
-                        Dashboard
-                    </NavItem>
-                    <NavItem to={"/chat"} isOpen={isOpen} icon="forum">
-                        Chat
-                    </NavItem>
-                    <NavItem to={"/sites"} isOpen={isOpen} icon="list_alt">
-                        Sites list
-                    </NavItem>
-                </div>
-                <NavItem to={"/settings"} isOpen={isOpen} icon="settings">
-                    Settings
-                </NavItem>
-            </ul>
-        </aside>
+      <aside className={`sidebar ${isOpen ? "open" : undefined}`}>
+        <ul className="sidebar-items">
+          <div className="upper-portion">
+            <li className="sidebar-item">
+              <NavItem
+                isOpen={isOpen}
+                icon={isOpen ? "chevron_left" : "chevron_right"}
+                onClick={toggleSidebar}
+              />
+            </li>
+            <NavItem to={"/dashboard"} isOpen={isOpen} icon="space_dashboard">
+              Dashboard
+            </NavItem>
+            <NavItem to={"/chat"} isOpen={isOpen} icon="forum">
+              Chat
+            </NavItem>
+            <NavItem to={"/sites"} isOpen={isOpen} icon="list_alt">
+              Sites list
+            </NavItem>
+            <NavItem to={"/new"} isOpen={isOpen} icon="add">
+              Request open new site
+            </NavItem>
+          </div>
+          <NavItem to={"/settings"} isOpen={isOpen} icon="settings">
+            Settings
+          </NavItem>
+        </ul>
+      </aside>
     );
 }
