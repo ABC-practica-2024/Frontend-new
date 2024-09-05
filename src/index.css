@@ -13,14 +13,125 @@ body,
 #root {
     overflow-x: clip;
     height: 100%;
+    background: linear-gradient(135deg, rgba(248,255,248,1) 0%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%) no-repeat fixed;
 }
 
 .root-layout,
 .user-layout {
+    display: flex;
+    flex-direction: row;
     height: 100%;
+    padding: 20px;
+    gap: 14px;
 }
 
 .content {
     width: 100%;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font: 36px Lufga, sans-serif;
+    color: #1B1B1B;
+}
+
+h4 {
+    font: 18px Lufga, sans-serif;
+    color: #1B1B1B;
+}
+
+p {
+    font: 16px Lufga, sans-serif;
+    color: #1B1B1B;
+}
+
+.small {
+    font: 12px Lufga, sans-serif;
+    color: #6A6A6A;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.scroll-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #1B1B1B;
+    border-radius: 3px;
+
+    user-select: none; /* Standard property */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    background: white;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    height: 50px;
+
+    padding: 10px 15px 10px 42px;
+    color: #1B1B1B;
+
+}
+
+.search-container .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #1B1B1B;
+
+    user-select: none; /* Standard property */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+select {
+    background-color: white;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    height: 50px;
+    padding: 10px 42px 10px 15px;
+    color: #1B1B1B;
+
+    min-width: 100px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='30px' viewBox='0 -960 960 960' width='30px' fill='%231b1b1b'%3E%3Cpath d='M462.61-405.08 355.52-512.17q-2.21-2.21-3.71-5.15-1.5-2.93-1.5-6.28 0-6.71 4.44-11.55 4.44-4.85 11.71-4.85h227.08q7.27 0 11.71 4.95 4.44 4.95 4.44 11.55 0 1.65-5.23 11.35L497.38-405.08q-3.69 3.7-7.97 5.7-4.28 2-9.41 2t-9.41-2q-4.28-2-7.98-5.7Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+}
+
+.logo {
+    -webkit-user-drag: none; /* For Safari and Chrome */
+    user-drag: none;
 }

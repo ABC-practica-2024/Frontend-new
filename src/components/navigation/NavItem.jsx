@@ -6,10 +6,10 @@ export default function NavItem({ to, isOpen, icon, children, ...props }) {
         <li className="nav-item">
             <NavLink
                 to={to}
-                className="nav-item-container flex flex-row items-center text-slate-950 rounded-2xl border border-slate-950 hover:bg-slate-100"
+                className={`nav-item-container ${icon === 'chevron_left' || icon === 'chevron_right' ? 'first-element' : ''} ${isOpen ? "open" : undefined}`}
                 {...props}
             >
-                <span className="material-symbols-rounded text-base block">
+                <span className="material-symbols-rounded text-base block icon">
                     {icon}
                 </span>
                 {isOpen && <label>{children}</label>}

@@ -1,10 +1,7 @@
 .sidebar {
-    height: calc(100vh - 64px);
+    height: calc(100vh - 40px);
     background-color: #fff;
-    margin: 16px;
-    border: 1px solid black;
-    border-radius: 16px;
-    padding: 16px;
+    border-radius: 20px;
 }
 
 .sidebar-items {
@@ -28,7 +25,6 @@
 .sidebar-items {
     list-style-type: none;
     padding: 0;
-    /* margin-top: 20px; Adaugă un mic spațiu între butonul de toggle și elementele din sidebar */
 }
 
 .sidebar-button {
@@ -45,5 +41,5 @@
 .sidebar .upper-portion {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 }
