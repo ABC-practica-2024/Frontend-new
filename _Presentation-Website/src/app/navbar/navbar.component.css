@@ -1,0 +1,28 @@
+.navbar {
+    position: absolute;
+    width: 390px;
+    --navbar-height: 70px;            /* css variable */
+    --navbar-width: 390px;
+    height: var(--navbar-height);
+    left: 20px;
+    --navbar-top: 28px;
+    top: var(--navbar-top);
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.abc-text {
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: calc(var(--navbar-height) / 2); /* Calculate line-height based on navbar height */
+    color: #1B1B1B;
+}
+
+.menu-button {
+    position: absolute;
+    right: 20px;
+    top: calc(var(--navbar-top) / 2);
+}
