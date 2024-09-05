@@ -6,7 +6,7 @@ export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
-        setIsOpen((prevState) => !prevState);
+        setIsOpen(prevState => !prevState);
     };
 
     return (
@@ -17,12 +17,9 @@ export default function Sidebar() {
                         isOpen={isOpen}
                         icon={isOpen ? "chevron_left" : "chevron_right"}
                         onClick={toggleSidebar}
+                        isExpandButton
                     />
-                    <NavItem
-                        to={"/dashboard"}
-                        isOpen={isOpen}
-                        icon="space_dashboard"
-                    >
+                    <NavItem to={"/dashboard"} isOpen={isOpen} icon="space_dashboard">
                         Dashboard
                     </NavItem>
                     <NavItem to={"/chat"} isOpen={isOpen} icon="forum">
