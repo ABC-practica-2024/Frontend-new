@@ -1,9 +1,8 @@
 <div class="container">
     <app-navbar></app-navbar>
 
-    <div class="page-content">
+    <div *ngIf="isHomePage()" class="page-content">
         <p>home content</p>
     </div>
 
-    <div>other home content</div>
 </div>

@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
+<router-outlet></router-outlet>
+
 <mat-card class="navbar" appearance="outlined">
     <mat-card-content class="abc-text">
         <span>ABC</span>
@@ -16,7 +18,7 @@
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </button>
-        <button mat-menu-item>
+        <button routerLink="/calendar" mat-menu-item>
             <mat-icon>calendar_month</mat-icon>
             <span>Calendar</span>
         </button>
