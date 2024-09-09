@@ -63,7 +63,7 @@ const adminRouter = createBrowserRouter([
 ]);
 
 export default function Router() {
-    return <RouterProvider router={adminRouter} />;
+    return <RouterProvider router={userRouter} />;
 
     const { isLoggedIn, role } = useContext(UserContext);
 

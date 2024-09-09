@@ -1,10 +1,10 @@
-.sidebar {
+.desktop-sidebar {
     height: calc(100vh - 40px);
     background-color: #fff;
     border-radius: 20px;
 }
 
-.sidebar-items {
+.desktop-sidebar .sidebar-items {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     transition: all 1s;
 }
 
-.toggle-button {
+.desktop-sidebar .toggle-button {
     background-color: #444;
     color: #fff;
     border: none;
@@ -22,12 +22,12 @@
     text-align: left;
 }
 
-.sidebar-items {
+.desktop-sidebar .sidebar-items {
     list-style-type: none;
     padding: 0;
 }
 
-.sidebar-button {
+.desktop-sidebar .sidebar-button {
     background: none;
     color: white;
     border: none;
@@ -38,8 +38,25 @@
     font-size: 16px;
 }
 
-.sidebar .upper-portion {
+.desktop-sidebar .upper-portion {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .desktop-sidebar {
+        display: none;
+    }
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+        height: 70px;
+    }
 }

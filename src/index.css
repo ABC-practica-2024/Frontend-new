@@ -132,6 +132,8 @@ select {
 }
 
 .logo {
+    min-height: 2rem;
+    height: 2rem;
     -webkit-user-drag: none; /* For Safari and Chrome */
     user-drag: none;
 }

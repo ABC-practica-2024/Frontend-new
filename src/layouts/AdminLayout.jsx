@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import TopBar from "../components/navigation/TopBar.jsx";
-import Sidebar from "../components/navigation/Sidebar.jsx";
+import DesktopSidebar from "../components/navigation/DesktopSidebar.jsx";
 
 function AdminLayout() {
     return (
         <div className="user-layout flex flex-row">
-            <Sidebar />
+            <DesktopSidebar />
             <div className="content">
                 <TopBar />
                 <Outlet />

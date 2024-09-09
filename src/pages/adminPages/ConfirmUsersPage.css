@@ -11,6 +11,13 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
 }
 
 .user-item {

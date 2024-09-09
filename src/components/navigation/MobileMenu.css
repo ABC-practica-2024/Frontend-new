@@ -1,0 +1,16 @@
+.mobile-menu {
+    display: none;
+
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 20px;
+    border: 1px solid #3d3d3d;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+}

@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./NavItem.css";
 
-export default function NavItem({ to, isOpen, icon, children, isExpandButton, ...props }) {
-    if (isExpandButton) {
+export default function NavItem({ to, isOpen, icon, children, isLongButton, ...props }) {
+    if (isLongButton) {
         return (
             <li className={`nav-item nav-item-container long-button ${isOpen ? "open" : undefined}`} onClick={props.onClick}>
                 <span className="material-symbols-rounded text-base block icon">

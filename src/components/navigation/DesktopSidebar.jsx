@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import NavItem from "./NavItem.jsx";
 
-export default function Sidebar() {
+export default function DesktopSidebar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -10,14 +10,14 @@ export default function Sidebar() {
     };
 
     return (
-        <aside className={`sidebar ${isOpen ? "open" : undefined}`}>
+        <aside className={`desktop-sidebar ${isOpen ? "open" : undefined}`}>
             <ul className="sidebar-items">
                 <div className="upper-portion">
                     <NavItem
                         isOpen={isOpen}
                         icon={isOpen ? "chevron_left" : "chevron_right"}
                         onClick={toggleSidebar}
-                        isExpandButton
+                        isLongButton
                     />
                     <NavItem to={"/dashboard"} isOpen={isOpen} icon="space_dashboard">
                         Dashboard
