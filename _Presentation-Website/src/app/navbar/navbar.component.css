@@ -1,8 +1,8 @@
 .navbar {
     position: absolute;
-    width: 390px;
+    width: 90vw;
+    max-width: 390vw;
     --navbar-height: 70px;            /* css variable */
-    --navbar-width: 390px;
     height: var(--navbar-height);
     left: 20px;
     --navbar-top: 28px;
