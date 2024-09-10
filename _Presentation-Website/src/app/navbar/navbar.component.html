@@ -8,7 +8,7 @@
 
 <mat-card class="navbar" appearance="outlined">
     <mat-card-content class="abc-text">
-        <span>ABC</span>
+        <span>ABC 2024</span>
     </mat-card-content>
     <button class="menu-button" mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
@@ -18,7 +18,7 @@
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </button>
-        <button mat-menu-item>
+        <button routerLink="/calendar" mat-menu-item>
             <mat-icon>calendar_month</mat-icon>
             <span>Calendar</span>
         </button>
@@ -26,7 +26,7 @@
             <mat-icon>groups</mat-icon>
             <span>Echipa</span>
         </button>
-        <button mat-menu-item>
+        <button routerLink="/contact" mat-menu-item>
             <mat-icon>contact_page</mat-icon>
             <span>Contact</span>
         </button>

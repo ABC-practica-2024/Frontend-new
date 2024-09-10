@@ -22,7 +22,7 @@ import {RouterLink, RouterOutlet} from "@angular/router";
         RouterLink
     ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
 
