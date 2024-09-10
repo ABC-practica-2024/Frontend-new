@@ -4,6 +4,10 @@
     padding-left: 30px;
 }
 
+.page-title {
+    padding-top: 120px;
+}
+
 .page-content {
-    padding-top: 100px;
+    padding-top: 20px;
 }
