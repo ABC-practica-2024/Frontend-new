@@ -5,8 +5,10 @@
     --navbar-height: 70px;            /* css variable */
     height: var(--navbar-height);
     left: 20px;
+    right: 20px;
     --navbar-top: 28px;
     top: var(--navbar-top);
+    margin: 20px auto;  /* 'auto' for horizontal centering */
 
     background: #FFFFFF;
     border-radius: 20px;
