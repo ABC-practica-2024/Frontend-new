@@ -8,9 +8,16 @@
 .team-card {
     padding: 10px;
     text-align: center;
+    horiz-align: center;
+    align-items: center;
     font-size: 1.2em;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.member-name {
+    padding-left: 5vw;
 }
 
 .team-organizer {
@@ -57,4 +64,14 @@
     text-align: left ;
     font-weight: bold;
 
+}
+
+.image {
+    padding-left: 0px;
+    margin-right: 10px;
+    width: 75px;  /* Set equal width */
+    height: 75px; /* Set equal height */
+    max-width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Adds rounded corners */
+    object-fit: cover; /* Ensures the image covers the whole area */
 }

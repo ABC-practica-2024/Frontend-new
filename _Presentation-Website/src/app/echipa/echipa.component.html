@@ -11,20 +11,21 @@
     </div>
 
     <div class="team-container">
-        <div class="team-card team-organizer">Gabi Mircea</div>
-        <div class="team-card team-organizer">Jane Smith</div>
-        <div class="team-card team-organizer">Alice Johnson</div>
+        <div class="team-card team-organizer" *ngFor="let name of organizerNameList">
+            <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
+            <p class="member-name">{{name}}</p>
+        </div>
     </div>
 
     <div class="page-content">
         <p class="subtitle">Studenți</p>
     </div>
 
-    <div class="team-container">
-        <div class="team-card team-member">Bob Brown</div>
-        <div class="team-card team-member">Charlie Davis</div>
-        <div class="team-card team-member">Deni Stark</div>
-        <div class="team-card team-member">Deni Stark</div>
-    </div>
 
+    <div class="team-container">
+        <div class="team-card team-member" *ngFor="let name of memberNameList">
+            <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
+            <p class="member-name">{{name}}</p>
+        </div>
+    </div>
 </div>
