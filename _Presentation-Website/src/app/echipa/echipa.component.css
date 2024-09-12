@@ -14,10 +14,20 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    justify-content: flex-start;
+}
+
+.team-card a {
+    display: flex;               /* Enable flexbox */
+    align-items: center;         /* Vertically center the image and text */
+    justify-content: flex-start; /* Align items from the start */
+    text-decoration: none;       /* Remove underline from the link */
+    color: inherit;              /* Inherit the text color for the link */
 }
 
 .member-name {
     padding-left: 5vw;
+    margin: 0;           /* Remove default margin */
 }
 
 .team-organizer {

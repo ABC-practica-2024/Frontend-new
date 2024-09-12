@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavbarComponent} from "../navbar/navbar.component";
 import {NgForOf, NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-echipa',
@@ -8,7 +9,8 @@ import {NgForOf, NgIf} from "@angular/common";
     imports: [
         NavbarComponent,
         NgIf,
-        NgForOf
+        NgForOf,
+        RouterLink
     ],
   templateUrl: './echipa.component.html',
   styleUrls: ['../app.component.css', './echipa.component.css']

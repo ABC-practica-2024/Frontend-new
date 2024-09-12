@@ -1,0 +1,37 @@
+.team-details {
+    display: flex;                    /* Flexbox layout */
+    align-items: center;              /* Vertically center the content */
+    justify-content: flex-start;
+    gap: 20px;                        /* Space between the left and right columns */
+    height: calc(100vh - 60px);        /* Adjust height to account for the top bar height (example 60px) */
+
+}
+
+.left-column {
+    display: flex;                    /* Flexbox layout for left column */
+    flex-direction: column;           /* Stack image and name vertically */
+    align-items: center;              /* Center the content horizontally */
+    max-width: 200px;                 /* Set maximum width for the left column */
+    justify-content: center;          /* Vertically center content inside left column */
+}
+
+.image {
+    width: 150px;                     /* Make the image rectangular */
+    height: 200px;                    /* Rectangular height */
+    object-fit: cover;                /* Keep the aspect ratio and fill the container */
+    border-radius: 10px;              /* Slightly round corners to make it look better */
+    margin-bottom: 10px;              /* Space between the image and name */
+}
+
+h2 {
+    font-size: 1.5em;                 /* Adjust font size for the name */
+    text-align: center;               /* Center the name text */
+}
+
+.right-column {
+                              
+    text-align: left;                 /* Align the text to the left */
+    max-width: 500px;                 /* Set maximum width for the testimonial text */
+    flex-direction: column;           /* Stack image and name vertically */
+    align-items: center;
+}

@@ -12,8 +12,10 @@
 
     <div class="team-container">
         <div class="team-card team-organizer" *ngFor="let name of organizerNameList">
-            <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
-            <p class="member-name">{{name}}</p>
+            <a routerLink="/team-member-details/{{name}}">
+                <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
+                <p class="member-name">{{name}}</p>
+            </a>
         </div>
     </div>
 
