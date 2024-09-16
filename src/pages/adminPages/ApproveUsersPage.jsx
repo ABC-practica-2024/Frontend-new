@@ -1,14 +1,13 @@
-import * as React from 'react';
 import {useEffect, useState} from "react";
 import './ConfirmUsersPage.css';
 import formatDate from "../../utils/FormatDate.js";
 import SearchBar from "../../components/UI/SearchBar.jsx";
 
-export default function ConfirmUsersPage() {
+export default function ApproveUsersPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [roleFilter, setRoleFilter] = useState('');
     const [sortOption, setSortOption] = useState('');
-    const [users, setUsers] = React.useState([
+    const [users, setUsers] = useState([
         {
             name: 'Mihai Popescu',
             email: 'mihai.popescu@gmail.com',
@@ -59,7 +58,7 @@ export default function ConfirmUsersPage() {
         }
     ]);
 
-    const [roles, setRoles] = React.useState([    ]);
+    const [roles, setRoles] = useState([]);
 
     useEffect(() => {
         // Fetch roles from the server
@@ -117,8 +116,8 @@ export default function ConfirmUsersPage() {
 
 
     return (
-        <div className="user-approval">
-            <h1>Aprobare utilizatori</h1>
+        <div className="user-subpage">
+            <h1>Approve users</h1>
             <div className="filters">
                 <div className="flex gap-2">
                     <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
