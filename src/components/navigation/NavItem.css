@@ -34,3 +34,25 @@
 .nav-item-container label {
     font-family: "Lufga", sans-serif;
 }
+
+.nav-item-mobile {
+    width: 100%;
+}
+
+.nav-item-container-mobile {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+
+    padding: 10px;
+    cursor: pointer;
+
+    align-items: center;
+
+    background: #fbfbfb;
+    border-radius: 20px;
+}

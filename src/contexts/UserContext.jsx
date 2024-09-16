@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { login } from "../api/authService";
+// jwt_decode from "jsonwebtoken";
 import { useNavigate } from "react-router-dom";
 
 const UserContext = createContext({
@@ -18,13 +19,18 @@ export function UserContextProvider({ children }) {
     const [username, setUsername] = useState("");
     const [token, setToken] = useState(null);
     const [profilePicture, setProfilePicture] = useState("");
-    const [role, setRole] = useState("");
+    const [role, setRole] = useState("visitor");
+    const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         const localStorageToken = localStorage.getItem("jwt");
         if (localStorageToken) {
             setToken(localStorageToken);
+            setUsername("username");
+            setRole("user");
+            setProfilePicture("https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg");
         }
+        setIsReady(true);
     }, []);
 
     const isLoggedIn = token !== null;
@@ -43,7 +49,7 @@ export function UserContextProvider({ children }) {
                     // todo get user data from decrypted token
                     setToken(token);
                     localStorage.setItem("jwt", token);
-                    
+
                 },
                 logout: () => {
                     setToken(null);
@@ -51,7 +57,7 @@ export function UserContextProvider({ children }) {
                 },
             }}
         >
-            {children}
+            {isReady ? children : null}
         </UserContext.Provider>
     );
 }

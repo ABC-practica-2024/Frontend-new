@@ -1,22 +1,41 @@
 import NavItem from "./NavItem.jsx";
 import './MobileMenu.css';
+import useCustomMenuButtons from "../../utils/useCustomMenuButtons.jsx";
+import NavItemMobile from "./NavItemMobile.jsx";
 
 function MobileMenu() {
+    const { menuButtons } = useCustomMenuButtons();
+
     return (
         <div className="mobile-menu">
             <ul className="mobile-menu-items">
-                <NavItem to={"/dashboard"} icon="space_dashboard">
-                    Dashboard
-                </NavItem>
-                <NavItem to={"/chat"} icon="forum">
-                    Chat
-                </NavItem>
-                <NavItem to={"/sites"} icon="list_alt">
-                    Sites list
-                </NavItem>
-                <NavItem to={"/settings"} icon="settings">
-                    Settings
-                </NavItem>
+                {menuButtons.filter(button => button.location === "sidebar_top").map((button, index) => (
+                    <NavItemMobile
+                        key={index}
+                        to={button.link}
+                        icon={button.iconName}
+                    >
+                        {button.name}
+                    </NavItemMobile>
+                ))}
+                {menuButtons.filter(button => button.location === "sidebar_bottom").map((button, index) => (
+                    <NavItemMobile
+                        key={index}
+                        to={button.link}
+                        icon={button.iconName}
+                    >
+                        {button.name}
+                    </NavItemMobile>
+                ))}
+                {menuButtons.filter(button => button.location === "topbar").map((button, index) => (
+                    <NavItemMobile
+                        key={index}
+                        to={button.link}
+                        icon={button.iconName}
+                    >
+                        {button.name}
+                    </NavItemMobile>
+                ))}
             </ul>
         </div>
     );

@@ -38,7 +38,7 @@
     font-size: 16px;
 }
 
-.desktop-sidebar .upper-portion {
+.desktop-sidebar .portion {
     display: flex;
     flex-direction: column;
     gap: 8px;

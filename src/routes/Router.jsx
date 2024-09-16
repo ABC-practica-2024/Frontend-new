@@ -9,7 +9,8 @@ import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
 import DashboardPage from "../pages/DashboardPage";
 import AdminLayout from "../layouts/AdminLayout.jsx";
-import ConfirmUsersPage from "../pages/adminPages/ConfirmUsersPage.jsx";
+import ApproveUsersPage from "../pages/adminPages/ApproveUsersPage.jsx";
+import ChatPage from "../pages/userPages/ChatPage.jsx";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const userRouter = createBrowserRouter([
                 path: "/",
                 element: <DashboardPage />,
             },
+            {
+                path: "/chat",
+                element: <ChatPage />,
+            }
         ],
     },
 ]);
@@ -55,16 +60,14 @@ const adminRouter = createBrowserRouter([
         element: <AdminLayout />,
         children: [
             {
-                path: "/confirm-users",
-                element: <ConfirmUsersPage />,
+                path: "/approve-users",
+                element: <ApproveUsersPage />,
             }
         ],
     },
 ]);
 
 export default function Router() {
-    return <RouterProvider router={userRouter} />;
-
     const { isLoggedIn, role } = useContext(UserContext);
 
     if (!isLoggedIn) {

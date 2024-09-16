@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../UI/Button.jsx";
 import logoImg from "../../assets/logo.svg";
@@ -7,11 +7,16 @@ import './TopBar.css';
 import './Sidebar.css'
 import NavItem from "./NavItem.jsx";
 import MobileMenu from "./MobileMenu.jsx";
+import useCustomMenuButtons from "../../utils/useCustomMenuButtons.jsx";
+import UserContext from "../../contexts/UserContext.jsx";
 
 export default function TopBar() {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+    const { menuButtons } = useCustomMenuButtons();
+    const { profilePicture } = useContext(UserContext);
 
     // Close the menu when the window is resized to desktop
     useEffect(() => {
@@ -30,7 +35,7 @@ export default function TopBar() {
 
     return (
         <>
-            <div className={`background-blur ${isMenuOpen ? "active" : ""}`}>
+            <div className={`background-blur ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
             </div>
             <div className="top-container">
                 <div className="top">
@@ -43,24 +48,32 @@ export default function TopBar() {
                             />
                         </ul>
                     </div>
+
                     <Card className="topbar">
                         <Link to="/">
                             <img src={logoImg} alt="Logo" className="logo"/>
                         </Link>
 
                         <div className="top-buttons">
-                            <Button onClick={() => navigate("/register")}>
-                                Register
-                            </Button>
-
-                            <Button outlined styleType="primary" onClick={() => navigate("/login")}>
-                                Login
-                            </Button>
+                            {menuButtons.filter(button => button.location === "topbar").map((button, index) => (
+                                <Button
+                                    key={index}
+                                    onClick={() => navigate(button.link)}
+                                    outlined={!button.isImportant}
+                                    styleType={button.isImportant && "primary"}
+                                >
+                                    {button.name}
+                                </Button>
+                            ))}
                         </div>
                     </Card>
+
+                    <div className="profile">
+                        <img src={profilePicture} alt="Profile" />
+                    </div>
                 </div>
                 {isMenuOpen && <MobileMenu/>}
             </div>
         </>
-    );
+);
 }

@@ -16,7 +16,13 @@ body,
     background: linear-gradient(135deg, rgba(248,255,248,1) 0%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%) no-repeat fixed;
 }
 
-.root-layout,
+.root-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
 .user-layout {
     display: flex;
     flex-direction: row;
@@ -49,9 +55,23 @@ p {
     color: #1B1B1B;
 }
 
+label {
+    font: 16px Lufga, sans-serif;
+    color: #1B1B1B;
+}
+
 .small {
     font: 12px Lufga, sans-serif;
     color: #6A6A6A;
+}
+
+.user-subpage {
+    font-family: Lufga, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    height: calc(100% - 70px - 12px);
+    flex-grow: 1;
 }
 
 .container {
@@ -69,6 +89,13 @@ p {
     flex-grow: 1;
     max-height: 100%;
     border-radius: 20px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 100%;
 }
 
 .icon {
@@ -132,8 +159,8 @@ select {
 }
 
 .logo {
-    min-height: 2rem;
-    height: 2rem;
+    min-height: 32px;
+    height: 32px;
     -webkit-user-drag: none; /* For Safari and Chrome */
     user-drag: none;
 }
