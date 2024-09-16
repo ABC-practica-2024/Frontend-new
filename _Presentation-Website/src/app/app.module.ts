@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NavbarComponent} from "./navbar/navbar.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    MatFormFieldModule
   ],
   providers: [
     provideAnimationsAsync()
