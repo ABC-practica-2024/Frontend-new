@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import './ConfirmUsersPage.css';
+import './ApproveUsersPage.css';
 import formatDate from "../../utils/FormatDate.js";
 import SearchBar from "../../components/UI/SearchBar.jsx";
 
