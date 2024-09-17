@@ -5,7 +5,7 @@
     margin-bottom: 0.75rem;
     gap: 8px;
 
-    z-index: 999999;
+    z-index: 1000000;
 }
 
 .top {
@@ -65,7 +65,7 @@
 
 .background-blur.active {
     backdrop-filter: blur(8px); /* Apply blur when active */
-    z-index: 10; /* Bring it above other elements */
+    z-index: 999999; /* Bring it above other elements */
 }
 
 @media (max-width: 768px) {
