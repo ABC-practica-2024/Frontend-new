@@ -6,6 +6,8 @@ import {MatCard} from "@angular/material/card";
 import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import { MatLabel } from "@angular/material/form-field";
+import {EmailService} from "../email.service";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -17,11 +19,20 @@ import { MatLabel } from "@angular/material/form-field";
         MatCard,
         MatFormField,
         MatInput,
-        MatLabel
+        MatLabel,
+        FormsModule
     ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+    name = '';
+    email = '';
+    message = '';
 
+    constructor(private emailService: EmailService) {}
+
+    onSubmit() {
+        this.emailService.sendEmail(this.name, this.email, this.message);
+    }
 }

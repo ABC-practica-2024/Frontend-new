@@ -1,10 +1,12 @@
 [
     {
         "name": "Gabi Mircea",
-        "testimonial": "John Doe is a great team member."
+        "testimonial": "John Doe is a great team member.",
+        "role": "PM"
     },
     {
         "name": "Jane Smith",
-        "testimonial": "Jane Smith is an excellent colleague."
+        "testimonial": "Jane Smith is an excellent colleague.",
+        "role": "membru"
     }
 ]

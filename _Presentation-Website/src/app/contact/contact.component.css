@@ -1,35 +1,131 @@
+/*.container {*/
+/*    display: grid;*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.page-title {*/
+/*    padding-top: 110px;*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.page-content {*/
+/*    padding-top: 20px;*/
+/*}*/
+
+/*.card-container {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*mat-card {*/
+/*    width: 550px;*/
+/*    position: relative;*/
+
+/*    top: 50px;*/
+/*    left: 420px;*/
+/*}*/
+
+/*textarea {*/
+/*    overflow-y: auto;*/
+/*    overflow-x: clip; !* Prevent horizontal scrolling *!*/
+/*    max-width: 100%;*/
+/*    resize: vertical;*/
+/*}*/
+
+body {
+    font-family: Arial, sans-serif;
+    /*color: #fff;*/
+    color: black;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
 .container {
-    display: grid;
-    gap: 20px;
-}
-
-.page-title {
-    padding-top: 110px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.page-content {
-    padding-top: 20px;
-}
-
-.card-container {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    background-color: #bcd6c3;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 100px auto 20px auto;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact p span {
+    color: #ff6f61;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
+    margin: 20px 0;
 }
 
-mat-card {
-    width: 550px;
-    position: relative;
-
-    top: 50px;
-    left: 420px;
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
-textarea {
-    overflow-y: auto;
-    overflow-x: clip; /* Prevent horizontal scrolling */
-    max-width: 100%;
-    resize: vertical;
+form button {
+    padding: 10px 20px;
+    /*background-color: #ff6f61;*/
+    background-color: black;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.contact-info {
+    margin-top: 20px;
+    padding-left: 310px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.contact-info p {
+    display: flex;          /* Folosim flex pentru aliniere pe orizontală */
+    align-items: center;     /* Aliniem vertical elementele din flex */
+    margin: 8px 0;           /* Spațiere între paragrafe */
+
+}
+
+.contact-info mat-icon {
+    margin-right: 8px;       /* Adaugă un spațiu între iconiță și text */
+    font-size: 20px;         /* Ajustează dimensiunea iconiței (dacă e nevoie) */
+    vertical-align: middle;  /* Asigură că iconița este la mijlocul textului */
+}
+
+

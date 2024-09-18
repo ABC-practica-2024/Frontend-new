@@ -1,27 +1,70 @@
+<!--<div class="container">-->
+<!--    <app-navbar></app-navbar>-->
+
+<!--    <div class="page-title">-->
+<!--        <p>Contact</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<mat-card class="card-container">-->
+<!--    <p>-->
+<!--        <mat-icon>call</mat-icon>-->
+<!--        Telefon: 0748888999-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        <mat-icon>mail</mat-icon>-->
+<!--        Email: a&#64;a.com-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        <mat-icon>location_on</mat-icon>-->
+<!--        Adresa: Str. X nr 1232-->
+<!--    </p>-->
+<!--    <p>Send us a message:</p>-->
+<!--    <mat-form-field appearance="fill">-->
+<!--        <mat-label>Enter text</mat-label>-->
+<!--        <textarea matInput type="text"></textarea>-->
+<!--    </mat-form-field>-->
+<!--</mat-card>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<app-navbar></app-navbar>
+<body>
 <div class="container">
-    <app-navbar></app-navbar>
-
-    <div class="page-title">
-        <p>Contact</p>
-    </div>
+    <main>
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>We <span>&#9829;</span> to dig! Both literally and intellectually!</p>
+            <p>We're an interdisciplinary team that likes to create things with fun, open-minded people.
+            <p>Feel free to share a thought with us!</p>
+            <form (submit)="onSubmit()">
+                <input type="text" name="name" placeholder="Your Name" required [(ngModel)]="name">
+                <input type="email" name="email" placeholder="Email" required [(ngModel)]="email">
+                <textarea name="message" placeholder="Message" required [(ngModel)]="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>Site-ul de arheo...</p>
+                <p>
+                    <mat-icon>location_on</mat-icon>
+                    Romania, Cluj-Napoca
+                </p>
+                <p>
+                    <mat-icon>call</mat-icon>
+                    (617) 312-2190
+                </p>
+                <p>
+                    <mat-icon>mail</mat-icon>
+                    <a href="mailto:test@test.com">test&#64;test.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
 </div>
-
-<mat-card class="card-container">
-    <p>
-        <mat-icon>call</mat-icon>
-        Telefon: 0748888999
-    </p>
-    <p>
-        <mat-icon>mail</mat-icon>
-        Email: a&#64;a.com
-    </p>
-    <p>
-        <mat-icon>location_on</mat-icon>
-        Adresa: Str. X nr 1232
-    </p>
-    <p>Send us a message:</p>
-    <mat-form-field appearance="fill">
-        <mat-label>Enter text</mat-label>
-        <textarea matInput type="text"></textarea>
-    </mat-form-field>
-</mat-card>
+</body>
+</html>
