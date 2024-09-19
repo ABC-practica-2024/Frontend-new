@@ -2,33 +2,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
+    
 <router-outlet></router-outlet>
 
-<mat-card class="navbar" appearance="outlined">
-    <mat-card-content class="abc-text">
-        <span>ABC 2024</span>
-    </mat-card-content>
-    <button class="menu-button" mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon>
+<body>
+<div class="navbar" appearance="outlined">
+    <button class="buton" routerLink="/">
+        <span class="abc-text">ABC 2024</span>
     </button>
-    <mat-menu #menu="matMenu" xPosition="before">
-        <button routerLink="/" mat-menu-item>
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
-        </button>
-        <button routerLink="/calendar" mat-menu-item>
-            <mat-icon>calendar_month</mat-icon>
-            <span>Calendar</span>
-        </button>
-        <button routerLink="/echipa" mat-menu-item>
-            <mat-icon>groups</mat-icon>
-            <span>Echipa</span>
-        </button>
-        <button routerLink="/contact" mat-menu-item>
-            <mat-icon>contact_page</mat-icon>
-            <span>Contact</span>
-        </button>
-    </mat-menu>
-</mat-card>
+
+    <ul xPosition="before">
+        <li>
+            <button class="buton" routerLink="/calendar">
+                <mat-icon>calendar_month</mat-icon>
+                <span>Calendar</span>
+            </button>
+        </li>
+        <li>
+            <button class="buton" routerLink="/echipa">
+                <mat-icon>groups</mat-icon>
+                <span>Echipa</span>
+            </button>
+        </li>
+        <li>
+            <button class="buton" routerLink="/contact">
+                <mat-icon>contact_page</mat-icon>
+                <span>Contact</span>
+            </button>
+        </li>
+    </ul>
+</div>
+</body>

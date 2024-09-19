@@ -2,16 +2,55 @@
     position: absolute;
     width: 90vw;
     max-width: 390vw;
-    --navbar-height: 70px;            /* css variable */
+    --navbar-height: 65px;            /* css variable */
     height: var(--navbar-height);
     left: 20px;
     right: 20px;
-    --navbar-top: 28px;
+    --navbar-top: 17px;
     top: var(--navbar-top);
     margin: 20px auto;  /* 'auto' for horizontal centering */
 
     background: #FFFFFF;
     border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;  /* Spațiu între titlu și meniu */
+    align-items: center;             /* Centrează elementele vertical */
+    padding: 6px 20px;
+}
+
+
+/* Stiluri pentru lista de meniu */
+.navbar ul {
+    list-style: none;                /* Fără buline pentru lista */
+    display: flex;                   /* Afișează elementele pe orizontală */
+    gap: 10px;                       /* Spațiu între elementele din listă */
+}
+
+/* Stil pentru link-urile de meniu */
+.navbar ul li a {
+    text-decoration: none;           /* Fără linie sub text */
+    color: #003057;                  /* Culoare albastră */
+    font-weight: 600;                /* Puțin bold */
+    font-size: 16px;                 /* Dimensiune font */
+}
+
+
+/* Stil pentru buton */
+.navbar .buton {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-icon {
+    font-size: 23px;                 /* Adjust icon size */
+    margin-right: 5px;               /* Space between icon and text */
 }
 
 .abc-text {
@@ -20,11 +59,6 @@
     font-weight: 400;
     font-size: 43px;
     line-height: calc(var(--navbar-height) / 2); /* Calculate line-height based on navbar height */
-    color: #1B1B1B;
-}
-
-.menu-button {
-    position: absolute;
-    right: 20px;
-    top: calc(var(--navbar-top) / 2);
+    background-color: transparent;
+    border: none;
 }

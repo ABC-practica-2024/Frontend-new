@@ -5,6 +5,8 @@
 .title {
     text-align: center;
     font-weight: bold;
+    padding-top: 118px;
+    font-size: 2em;
 }
 
 .container::after {
@@ -18,4 +20,37 @@
 
 .p1, .p2 {
     display: inline-block;
+}
+
+/*tudor, mai jos*/
+
+.container {
+    margin-top: 100px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    width: 90vw;
+    max-width: 390vw;
+}
+
+.p1, .p2 {
+    display: inline-block;
+}
+
+.announcement {
+    width: 90%;
+    background-color: #bcd6c3;
+    margin: auto;
+    max-width: 800vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
