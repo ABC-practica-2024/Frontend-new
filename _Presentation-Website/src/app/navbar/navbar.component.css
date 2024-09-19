@@ -2,11 +2,11 @@
     position: absolute;
     width: 90vw;
     max-width: 390vw;
-    --navbar-height: 70px;            /* css variable */
+    --navbar-height: 65px;            /* css variable */
     height: var(--navbar-height);
     left: 20px;
     right: 20px;
-    --navbar-top: 18px;
+    --navbar-top: 17px;
     top: var(--navbar-top);
     margin: 20px auto;  /* 'auto' for horizontal centering */
 
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;  /* Spațiu între titlu și meniu */
     align-items: center;             /* Centrează elementele vertical */
-    padding: 10px 20px;
+    padding: 6px 20px;
 }
 
 

@@ -1,44 +1,8 @@
-/*.container {*/
-/*    display: grid;*/
-/*    gap: 20px;*/
-/*}*/
-
-/*.page-title {*/
-/*    padding-top: 110px;*/
-/*    text-align: center;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*.page-content {*/
-/*    padding-top: 20px;*/
-/*}*/
-
-/*.card-container {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
-/*mat-card {*/
-/*    width: 550px;*/
-/*    position: relative;*/
-
-/*    top: 50px;*/
-/*    left: 420px;*/
-/*}*/
-
-/*textarea {*/
-/*    overflow-y: auto;*/
-/*    overflow-x: clip; !* Prevent horizontal scrolling *!*/
-/*    max-width: 100%;*/
-/*    resize: vertical;*/
-/*}*/
-
 body {
     font-family: Arial, sans-serif;
-    /*color: #fff;*/
+    color: #fff;
     color: black;
-    padding-top: 150px;
+    padding-top: 98px;
     min-height: 100vh;
 }
 
@@ -93,7 +57,7 @@ form textarea {
 
 form button {
     padding: 10px 20px;
-    /*background-color: #ff6f61;*/
+    background-color: #ff6f61;
     background-color: black;
     border: none;
     color: #fff;
@@ -116,16 +80,14 @@ form button {
 }
 
 .contact-info p {
-    display: flex;          /* Folosim flex pentru aliniere pe orizontală */
-    align-items: center;     /* Aliniem vertical elementele din flex */
-    margin: 8px 0;           /* Spațiere între paragrafe */
+    display: flex;          /* Folosim flex pentru aliniere pe orizontală /
+    align-items: center;     / Aliniem vertical elementele din flex /
+    margin: 8px 0;           / Spațiere între paragrafe /
 
 }
 
 .contact-info mat-icon {
-    margin-right: 8px;       /* Adaugă un spațiu între iconiță și text */
-    font-size: 20px;         /* Ajustează dimensiunea iconiței (dacă e nevoie) */
-    vertical-align: middle;  /* Asigură că iconița este la mijlocul textului */
+    margin-right: 8px;       / Adaugă un spațiu între iconiță și text /
+    font-size: 20px;         / Ajustează dimensiunea iconiței (dacă e nevoie) /
+    vertical-align: middle;  / Asigură că iconița este la mijlocul textului */
 }
-
-

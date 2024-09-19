@@ -2,11 +2,49 @@
     {
         "name": "Gabi Mircea",
         "testimonial": "John Doe is a great team member.",
-        "role": "PM"
+        "role": "PM",
+        "team": "Team Alpha",
+        "an_studiu": 3,
+        "specializare": "Project Management"
     },
     {
         "name": "Jane Smith",
         "testimonial": "Jane Smith is an excellent colleague.",
-        "role": "membru"
+        "role": "membru",
+        "team": "Team Beta",
+        "an_studiu": 2,
+        "specializare": "Design"
+    },
+    {
+        "name": "Alex Popescu",
+        "testimonial": "Alex is an outstanding project manager who always delivers on time.",
+        "role": "PM",
+        "team": "Team Gamma",
+        "an_studiu": 4,
+        "specializare": "Agile Management"
+    },
+    {
+        "name": "Maria Georgescu",
+        "testimonial": "Maria is a meticulous PM who handles tasks efficiently.",
+        "role": "PM",
+        "team": "Team Alpha",
+        "an_studiu": 3,
+        "specializare": "Risk Management"
+    },
+    {
+        "name": "Ion Ionescu",
+        "testimonial": "Ion always brings fresh ideas and works well with the team.",
+        "role": "membru",
+        "team": "Team Beta",
+        "an_studiu": 2,
+        "specializare": "Marketing"
+    },
+    {
+        "name": "Ana Vasilescu",
+        "testimonial": "Ana is a team player who contributes significantly to group projects.",
+        "role": "membru",
+        "team": "Team Delta",
+        "an_studiu": 1,
+        "specializare": "Communications"
     }
 ]
