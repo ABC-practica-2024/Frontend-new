@@ -11,7 +11,7 @@
     </div>
 
     <div class="team-container">
-        <div class="team-card team-organizer" *ngFor="let name of organizerNameList">
+        <div class="team-card team-organizer" *ngFor="let name of organizers$ | async">
             <a routerLink="/team-member-details/{{name}}">
                 <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
                 <p class="member-name">{{name}}</p>
@@ -25,7 +25,7 @@
 
 
     <div class="team-container">
-        <div class="team-card team-member" *ngFor="let name of memberNameList">
+        <div class="team-card team-member" *ngFor="let name of members$ | async">
             <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
             <p class="member-name">{{name}}</p>
         </div>

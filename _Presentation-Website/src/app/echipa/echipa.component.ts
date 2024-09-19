@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {NavbarComponent} from "../navbar/navbar.component";
-import {NgForOf, NgIf} from "@angular/common";
+import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {TeamService} from "../team.service";
 import {TeamMember} from "../team-member";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-echipa',
@@ -13,36 +13,24 @@ import {Observable} from "rxjs";
         NavbarComponent,
         NgIf,
         NgForOf,
-        RouterLink
+        RouterLink,
+        AsyncPipe
     ],
   templateUrl: './echipa.component.html',
   styleUrls: ['../app.component.css', './echipa.component.css']
 })
 export class EchipaComponent implements OnInit {
-    organizers: Observable<TeamMember[]> | undefined;
-    members: Observable<TeamMember[]> | undefined;
-    organizerNameList: string[] | undefined;
-    memberNameList: string[] | undefined;
+    organizers$: Observable<string[]> | undefined;
+    members$: Observable<string[]> | undefined;
 
     constructor(private teamService: TeamService) { }
 
     ngOnInit() {
-        // localStorage.clear();
-        this.getOrganizers();
-        this.getMembers();
-    }
-
-    getOrganizers() {
-        this.organizers = this.teamService.getTeamMembersByRole("PM");
-        this.organizers.subscribe(data => {
-            this.organizerNameList = data.map(item => item.name);
-        });
-    }
-
-    getMembers() {
-        this.members = this.teamService.getTeamMembersByRole("membru");
-        this.members.subscribe(data => {
-            this.memberNameList = data.map(item => item.name);
-        });
+        this.organizers$ = this.teamService.getTeamMembersByRole('PM').pipe(
+            map((data) => data.map((item) => item.name)) // Extract organizer names directly
+        );
+        this.members$ = this.teamService.getTeamMembersByRole('membru').pipe(
+            map((data) => data.map((item) => item.name)) // Extract member names directly
+        );
     }
 }

@@ -1,46 +1,19 @@
 <div class="container">
     <p class="title">Titlu</p>
     <div>
-        <div *ngFor="let post of posts | async">
-            <p class="p1"><mat-icon>calendar_month</mat-icon></p>
-            <p class="p2">{{post.date}}</p>
-            <p>{{post.text}}</p>
-            <a routerLink="/post-details/{{post.id}}">
-                <div>
-                    <p class="p1">vezi mai multe</p>
-                    <p class="p2"><mat-icon>more-vert</mat-icon></p>
-                </div>
-            </a>
+        <div class="announcement">
+            <div *ngFor="let post of posts$ | async">
+                <p class="p1"><mat-icon>calendar_month</mat-icon></p>
+                <p class="p2">{{post.date}}</p>
+                <p>{{post.text}}</p>
+                <a routerLink="/post-details/{{post.id}}">
+                    <div>
+                        <p class="p1">vezi mai multe</p>
+                        <p class="p2"><mat-icon>more-vert</mat-icon></p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="announcement">
-        <p class="title">START ABC2024</p>
-        <div>
-            <p class="p1"><mat-icon>calendar_month</mat-icon></p>
-            <p class="p2">05.08.2024</p>
-        </div>
-
-        <p>Am inceput sa sapam pe sit pentru a avea subiectul practicii</p>
-        <div>
-            <p class="p1">vezi mai multe</p>
-            <p class="p2"><mat-icon>more-vert</mat-icon></p>
-        </div>
-    </div>
-
-    <div class="announcement">
-        <p class="title">Discutii ABC2024</p>
-        <div>
-            <p class="p1"><mat-icon>calendar_month</mat-icon></p>
-            <p class="p2">10.08.2024</p>
-        </div>
-
-        <p>Am inceput discutiile despre aplicatia propriu-zisa si fluxul de munca</p>
-        <div>
-            <p class="p1">vezi mai multe</p>
-            <p class="p2"><mat-icon>more-vert</mat-icon></p>
-        </div>
-    </div>
-</div>

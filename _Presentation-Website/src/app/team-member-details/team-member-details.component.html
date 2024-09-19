@@ -1,13 +1,17 @@
-<div class="team-details">
-    <div class="left-column">
+<div class="container">
+    <main>
+        <section class="team-details">
+            <div class="left-column">
 
-        <img class="image" src="../../assets/organizers/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
-    </div>
-    <div class="right-column">
-        <h2>{{ teamMember?.name }}</h2>
-        <p>Team: {{teamMember?.team}}</p>
-        <p>An de studiu: {{teamMember?.an_studiu}}</p>
-        <p>Specializare: {{teamMember?.specializare}}</p>
-        <p class="testimonial">{{ teamMember?.testimonial }}</p>
-    </div>
+                <img class="image" src="../../assets/organizers/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
+            </div>
+            <div class="right-column">
+                <h2>{{ teamMember?.name }}</h2>
+                <p>Team: {{teamMember?.team}}</p>
+                <p>An de studiu: {{teamMember?.an_studiu}}</p>
+                <p>Specializare: {{teamMember?.specializare}}</p>
+                <p class="testimonial">{{ teamMember?.testimonial }}</p>
+            </div>
+        </section>
+    </main>
 </div>

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {TeamMember} from "./team-member";
-import {Observable, of} from "rxjs";
+import {BehaviorSubject, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
     private teamMembers: TeamMember[] = [];
+    private teamMembersSubject = new BehaviorSubject<TeamMember[]>([]);
+
 
     constructor() {
         this.loadTeamMembers(); // Load data from localStorage or fetch it
@@ -23,6 +25,7 @@ export class TeamService {
 
     private loadFromLocalStorage(storedData: string): void {
         this.teamMembers = JSON.parse(storedData); // Parse and assign data from localStorage
+        this.teamMembersSubject.next(this.teamMembers); // Update subject
     }
 
     private fetchTeamMembers(): Promise<void> {
@@ -31,6 +34,7 @@ export class TeamService {
             .then(data => {
                 this.teamMembers = data;
                 localStorage.setItem('teamMembers', JSON.stringify(data)); // Store in localStorage
+                this.teamMembersSubject.next(this.teamMembers); // Update subject
             });
     }
 

@@ -34,3 +34,22 @@ h2 {
     flex-direction: column;           /* Stack image and name vertically */
     align-items: center;
 }
+
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #bcd6c3;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 200px auto 20px auto;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}

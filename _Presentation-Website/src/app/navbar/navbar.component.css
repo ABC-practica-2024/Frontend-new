@@ -28,11 +28,26 @@
 }
 
 /* Stil pentru link-urile de meniu */
-.navbar ul li a {
+.navbar a {
     text-decoration: none;           /* Fără linie sub text */
-    color: #003057;                  /* Culoare albastră */
+    color: black;                  /* Culoare albastră */
     font-weight: 600;                /* Puțin bold */
     font-size: 16px;                 /* Dimensiune font */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: lightskyblue;                  /* Culoare albă la hover */
+    background-color: white;       /* Background albastru închis la hover */
+}
+
+.navbar a:active {
+    background-color: white;       /* Even darker blue when active (on click) */
+    color: white;                  /* Culoare albă la click */
+}
+
+.navbar ul li {
+    margin-right: 15px;           /* Space between nav items */
 }
 
 
@@ -62,3 +77,5 @@
     background-color: transparent;
     border: none;
 }
+
+

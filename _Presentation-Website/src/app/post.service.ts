@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Post} from "./post";
-import {Observable, of} from "rxjs";
+import {BehaviorSubject, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
     private posts: Post[] = [];
+    private postsSubject = new BehaviorSubject<Post[]>([]);
 
     constructor() {
         this.loadPosts();
@@ -23,6 +24,7 @@ export class PostService {
 
     private loadFromLocalStorage(storedData: string): void {
         this.posts = JSON.parse(storedData);
+        this.postsSubject.next(this.posts);
     }
 
     private fetchPosts(): Promise<void> {
@@ -31,6 +33,7 @@ export class PostService {
             .then(data => {
                this.posts = data;
                localStorage.setItem('posts', JSON.stringify(data));
+                this.postsSubject.next(this.posts);
             });
     }
 

@@ -21,7 +21,7 @@ import {AsyncPipe, NgForOf} from "@angular/common";
   styleUrl: './calendar.component.css'
 })
 export class CalendarComponent implements OnInit {
-    posts: Observable<Post[]> | undefined;
+    posts$: Observable<Post[]> | undefined;
 
     constructor(private postService: PostService) {
     }
@@ -31,7 +31,17 @@ export class CalendarComponent implements OnInit {
         this.getPosts();
     }
 
+    // checkPostVersion() {
+    //     const storedVersion = localStorage.getItem('postVersion');
+    //     const latestVersion = this.postService.getLatestPostVersion();
+    //
+    //     if (storedVersion !== latestVersion) {
+    //         localStorage.clear(); // Clear the old posts
+    //         localStorage.setItem('postVersion', latestVersion); // Store the new version
+    //     }
+    // }
+
     getPosts() {
-        this.posts = this.postService.getPosts();
+        this.posts$ = this.postService.getPosts();
     }
 }
