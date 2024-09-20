@@ -10,6 +10,7 @@ export class PostService {
     private postsSubject = new BehaviorSubject<Post[]>([]);
 
     constructor() {
+        // localStorage.clear();
         this.loadPosts();
     }
 

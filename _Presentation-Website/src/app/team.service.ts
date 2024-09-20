@@ -11,6 +11,7 @@ export class TeamService {
 
 
     constructor() {
+        // localStorage.clear();
         this.loadTeamMembers(); // Load data from localStorage or fetch it
     }
 
