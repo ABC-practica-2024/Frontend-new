@@ -6,9 +6,6 @@
                 <p class="p1"><mat-icon>calendar_month</mat-icon></p>
                 <p class="p2">{{post.date}}</p>
                 <p>{{post.text}}</p>
-                <div *ngFor="let num of [].constructor(post.nrImages); let i = index">
-                    <img src="../../assets/posts_images/{{post.imageFolder}}/{{i+1}}.jpg" alt="">
-                </div>
                 <a routerLink="/post-details/{{post.id}}">
                     <div>
                         <p class="p1">vezi mai multe</p>

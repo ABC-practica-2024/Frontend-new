@@ -2,11 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {Post} from "../post";
 import {ActivatedRoute} from "@angular/router";
 import {PostService} from "../post.service";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-post-details',
   standalone: true,
-  imports: [],
+    imports: [
+        NgForOf
+    ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.css'
 })

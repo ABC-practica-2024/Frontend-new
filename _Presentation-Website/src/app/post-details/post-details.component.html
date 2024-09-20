@@ -4,4 +4,7 @@
     <div class="announcement">
         <p>{{post?.description}}</p>
     </div>
+    <div *ngFor="let num of [].constructor(post?.nrImages); let i = index">
+        <img src="../../assets/posts_images/{{post?.imageFolder}}/{{i+1}}.jpg" alt="">
+    </div>
 </div>
