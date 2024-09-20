@@ -4,4 +4,5 @@ export interface Post {
     text: string;
     description: string;
     imageFolder: string;
+    nrImages: number
 }
