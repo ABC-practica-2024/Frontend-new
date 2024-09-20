@@ -2,7 +2,6 @@
     <main>
         <section class="team-details">
             <div class="left-column">
-
                 <img class="image" src="../../assets/organizers/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
             </div>
             <div class="right-column">
@@ -10,8 +9,10 @@
                 <p>Team: {{teamMember?.team}}</p>
                 <p>An de studiu: {{teamMember?.an_studiu}}</p>
                 <p>Specializare: {{teamMember?.specializare}}</p>
-                <p class="testimonial">{{ teamMember?.testimonial }}</p>
             </div>
         </section>
+        <div class="under-text">
+            <p class="testimonial">{{ teamMember?.testimonial }}</p>
+        </div>
     </main>
 </div>

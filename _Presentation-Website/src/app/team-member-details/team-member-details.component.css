@@ -1,10 +1,11 @@
 .team-details {
     display: flex;                    /* Flexbox layout */
-    align-items: center;              /* Vertically center the content */
+    align-items: flex-start;              /* Vertically center the content */
     justify-content: flex-start;
-    gap: 20px;                        /* Space between the left and right columns */
-    height: calc(100vh - 60px);        /* Adjust height to account for the top bar height (example 60px) */
-
+    gap: 30px;                        /* Space between the left and right columns */
+    height: auto;        /* Adjust height to account for the top bar height (example 60px) */
+    padding-top: 30px;
+    flex-wrap: wrap;
 }
 
 .left-column {
@@ -16,8 +17,8 @@
 }
 
 .image {
-    width: 150px;                     /* Make the image rectangular */
-    height: 200px;                    /* Rectangular height */
+    width: 155px;                     /* Make the image rectangular */
+    height: 205px;                    /* Rectangular height */
     object-fit: cover;                /* Keep the aspect ratio and fill the container */
     border-radius: 10px;              /* Slightly round corners to make it look better */
     margin-bottom: 10px;              /* Space between the image and name */
@@ -25,7 +26,8 @@
 
 h2 {
     font-size: 1.5em;                 /* Adjust font size for the name */
-    text-align: center;               /* Center the name text */
+    text-align: center;                 /* Center the name text */
+    font-weight: bold;
 }
 
 .right-column {
@@ -33,6 +35,19 @@ h2 {
     max-width: 500px;                 /* Set maximum width for the testimonial text */
     flex-direction: column;           /* Stack image and name vertically */
     align-items: center;
+
+}
+
+.under-text {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;          /* Ensure the under-text spans the full width */
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    gap: 30px;
+    height: auto;
 }
 
 main {
@@ -43,6 +58,7 @@ main {
     padding: 20px;
     box-sizing: border-box;
     margin: 200px auto 20px auto;
+    overflow-wrap: break-word
 }
 
 .container {

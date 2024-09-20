@@ -1,22 +1,22 @@
-.container {
-    margin-top: 100px;
-}
+/*.container {*/
+/*    margin-top: 100px;*/
+/*}*/
 
 .title {
     text-align: center;
     font-weight: bold;
-    padding-top: 118px;
+    padding-top: 50px;
     font-size: 2em;
 }
 
-.container::after {
+/*.container::after {
     content: "";
     display: block;
     border-top: 1px solid #ccc;
     margin: 10px 0;
     width: 90vw;
     max-width: 390vw;
-}
+}*/
 
 .p1, .p2 {
     display: inline-block;
@@ -24,23 +24,23 @@
 
 /*tudor, mai jos*/
 
-.container {
-    margin-top: 100px;
-}
+/*.container {*/
+/*    margin-top: 100px;*/
+/*}*/
 
 .title {
     text-align: center;
     font-weight: bold;
 }
 
-.container::after {
+/*.container::after {
     content: "";
     display: block;
     border-top: 1px solid #ccc;
     margin: 10px 0;
     width: 90vw;
     max-width: 390vw;
-}
+}*/
 
 .p1, .p2 {
     display: inline-block;
@@ -53,4 +53,19 @@
     max-width: 800vw;
     border-radius: 10px;
     margin-bottom: 10px;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 200px;
+}
+
+.continut {
+    padding-left: 10px;
 }

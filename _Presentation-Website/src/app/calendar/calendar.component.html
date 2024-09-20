@@ -1,7 +1,7 @@
 <div class="container">
-    <p class="title">Titlu</p>
-    <div>
-        <div class="announcement">
+    <div class="announcement">
+        <p class="title">Titlu</p>
+        <div class="continut">
             <div *ngFor="let post of posts$ | async">
                 <p class="p1"><mat-icon>calendar_month</mat-icon></p>
                 <p class="p2">{{post.date}}</p>

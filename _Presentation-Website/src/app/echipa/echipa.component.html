@@ -1,33 +1,34 @@
+<app-navbar></app-navbar>
+
 <div class="container">
-    <app-navbar></app-navbar>
+    <main>
+        <div class="page-title">
+            <p class="title">Echipa</p>
+        </div>
 
-    <div class="page-title">
+        <div class="page-content">
+            <p class="subtitle">Organizatori</p>
+        </div>
 
-        <p class="title">Echipa</p>
-    </div>
+        <div class="team-container">
+            <div class="team-card team-organizer" *ngFor="let name of organizers$ | async">
+                <a routerLink="/team-member-details/{{name}}">
+                    <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
+                    <p class="member-name">{{name}}</p>
+                </a>
+            </div>
+        </div>
 
-    <div class="page-content">
-        <p class="subtitle">Organizatori</p>
-    </div>
+        <div class="page-content">
+            <p class="subtitle">Studenți</p>
+        </div>
 
-    <div class="team-container">
-        <div class="team-card team-organizer" *ngFor="let name of organizers$ | async">
-            <a routerLink="/team-member-details/{{name}}">
-                <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
+
+        <div class="team-container">
+            <div class="team-card team-member" *ngFor="let name of members$ | async">
+                <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
                 <p class="member-name">{{name}}</p>
-            </a>
+            </div>
         </div>
-    </div>
-
-    <div class="page-content">
-        <p class="subtitle">Studenți</p>
-    </div>
-
-
-    <div class="team-container">
-        <div class="team-card team-member" *ngFor="let name of members$ | async">
-            <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
-            <p class="member-name">{{name}}</p>
-        </div>
-    </div>
+    </main>
 </div>
