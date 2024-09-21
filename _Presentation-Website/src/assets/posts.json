@@ -4,7 +4,6 @@
         "date": "29.07.2024",
         "text": "TESTINGAm inceput sa sapam pe sit pentru a avea subiectul practicii",
         "description": "Astazi, impreuna cu Dinu si Gabi Mircea, am inceput sapaturile serioase pe santierul arheologic. Totodata, Gabi a fost foarte nice si a vorbit cu sora sa Cri, care ne-a invitat pe toti in laboratorul de biologie pentru a incerca sa deslusim anumite caracteristici de pe un anumit schelet. Spoiler alert: scheletul era un barbat in jurul varstei de 30 de ani. Asta ne-a ocupat urmatoarele cateva zile, deci a fost o saptamana plina pentru noi! Pe langa asta am inceput in forta si sa facem networking puternic cu echipa, astfel ca am ajuns sa lucram chiar ca o echipa misto, nu doar o adunatura de studenti care nu se cunosc unii pe altii.",
-        "imageFolder": "post1",
         "nrImages": 3
     },
     {
@@ -12,7 +11,6 @@
         "date": "04.08.2024",
         "text": "Am inceput discutiile despre aplicatia propriu-zisa si fluxul de munca",
         "description": "",
-        "imageFolder": "post2",
         "nrImages": 2
     },
     {
@@ -20,7 +18,6 @@
         "date":"12.08.2024",
         "text":"Am inceput implementarile pentru aplicatiile de arheo, bio si barcuta",
         "description": "",
-        "imageFolder": "post3",
         "nrImages": 4
     },
     {
@@ -28,7 +25,6 @@
         "date":"16.08.2024",
         "text":"Cea mai intensa saptamana gata!",
         "description": "",
-        "imageFolder": "post4",
         "nrImages": 1
     }
 ]
