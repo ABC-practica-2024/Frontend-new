@@ -1,7 +1,7 @@
 .container {
     display: grid;
     gap: 20px;
-    padding-left: 30px;
+    padding-left: 65px;
 }
 
 .page-title {
@@ -11,3 +11,45 @@
 .page-content {
     padding-top: 20px;
 }
+
+.footer {
+    position: relative; /* No longer fixed */
+    width: 100%;
+    color: #333;
+    text-align: left;
+    padding: 10px 0;
+    margin-top: 20px; /* To give space between the content and footer */
+    text-indent: 4.5vw;
+    background-color: #bcd6c3;
+}
+
+
+.slideshow {
+    position: relative; /* Allows for absolute positioning of children */
+    max-width: 100%; /* Keep it responsive */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.slideshow-container {
+    display: flex; /* Align images horizontally */
+    position: relative;
+    max-width: 100%; /* Keep it responsive */
+    margin: auto; /* Center it horizontally */
+    overflow: hidden; /* Hide overflowing content */
+    height: 400px; /* Set a specific height for the slideshow */
+    padding-bottom: 15px;
+}
+
+.slide {
+    min-width: 100%; /* Each image takes full width */
+    height: 100%; /* Ensure each image takes full height of the container */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    transition: opacity 1s ease-in-out; /* Fade in/out effect */
+    opacity: 0; /* Start with images hidden */
+}
+
+.slide.active {
+    opacity: 1; /* Show active image */
+}
+
+

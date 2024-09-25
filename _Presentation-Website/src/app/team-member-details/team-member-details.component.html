@@ -1,14 +1,21 @@
 <div class="container">
     <main>
         <section class="team-details">
-            <div class="left-column">
-                <img class="image" src="../../assets/organizers/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
+            <div *ngIf="teamMember?.role === 'Project Manager'">
+                <div class="left-column">
+                    <img class="image" src="../../assets/organizers/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
+                </div>
+            </div>
+            <div *ngIf="teamMember?.role === 'Member'">
+                <div class="left-column">
+                    <img class="image" src="../../assets/members/{{ teamMember?.name }}.jpg" alt="{{ teamMember?.name }}">
+                </div>
             </div>
             <div class="right-column">
                 <h2>{{ teamMember?.name }}</h2>
                 <p>Team: {{teamMember?.team}}</p>
-                <p>An de studiu: {{teamMember?.an_studiu}}</p>
-                <p>Specializare: {{teamMember?.specializare}}</p>
+                <p>Year of study: {{teamMember?.year_of_study}}</p>
+                <p>Specialization: {{teamMember?.specialization}}</p>
             </div>
         </section>
         <div class="under-text">

@@ -3,6 +3,8 @@ export interface TeamMember {
     testimonial: string;
     role: string;
     team: string;
-    an_studiu: number;
-    specializare: string;
+    year_of_study: number;
+    specialization: string;
 }
+
+

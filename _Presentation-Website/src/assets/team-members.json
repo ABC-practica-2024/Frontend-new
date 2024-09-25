@@ -2,49 +2,49 @@
     {
         "name": "Gabi Mircea",
         "testimonial": "John Doe is a great team member.",
-        "role": "PM",
+        "role": "Project Manager",
         "team": "Team XYZ",
-        "an_studiu": 3,
-        "specializare": "Project Management"
+        "year_of_study": 3,
+        "specialization": "Project Management"
     },
     {
         "name": "Jane Smith",
         "testimonial": "Jane Smith is an excellent colleague.",
-        "role": "membru",
+        "role": "Member",
         "team": "Team Beta",
-        "an_studiu": 2,
-        "specializare": "Design"
+        "year_of_study": 2,
+        "specialization": "Design"
     },
     {
         "name": "Alex Popescu",
         "testimonial": "Alex is an outstanding project manager who always delivers on time.",
-        "role": "PM",
+        "role": "Project Manager",
         "team": "Team Gamma",
-        "an_studiu": 4,
-        "specializare": "Agile Management"
+        "year_of_study": 4,
+        "specialization": "Agile Management"
     },
     {
         "name": "Maria Georgescu",
-        "testimonial": "Maria is a meticulous PM who handles tasks efficiently.",
-        "role": "PM",
+        "testimonial": "Maria is a meticulous project manager who handles tasks efficiently.",
+        "role": "Project Manager",
         "team": "Team Alpha",
-        "an_studiu": 3,
-        "specializare": "Risk Management"
+        "year_of_study": 3,
+        "specialization": "Risk Management"
     },
     {
         "name": "Ion Ionescu",
         "testimonial": "Ion always brings fresh ideas and works well with the team.",
-        "role": "membru",
+        "role": "Member",
         "team": "Team Beta",
-        "an_studiu": 2,
-        "specializare": "Marketing"
+        "year_of_study": 2,
+        "specialization": "Marketing"
     },
     {
         "name": "Ana Vasilescu",
         "testimonial": "Ana is a team player who contributes significantly to group projects.",
-        "role": "membru",
+        "role": "Member",
         "team": "Team Delta",
-        "an_studiu": 1,
-        "specializare": "Communications"
+        "year_of_study": 1,
+        "specialization": "Communications"
     }
 ]

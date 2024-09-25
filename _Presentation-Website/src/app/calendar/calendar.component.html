@@ -1,17 +1,18 @@
 <div class="container">
     <div class="announcement">
-        <p class="title">Titlu</p>
+        <p class="title">Title</p>
         <div class="continut">
             <div *ngFor="let post of posts$ | async">
-                <p class="p1"><mat-icon>calendar_month</mat-icon></p>
-                <p class="p2">{{post.date}}</p>
-                <p>{{post.text}}</p>
-                <a routerLink="/post-details/{{post.id}}">
-                    <div>
-                        <p class="p1">vezi mai multe</p>
-                        <p class="p2"><mat-icon>more-vert</mat-icon></p>
-                    </div>
-                </a>
+                <div class="continut_mai_mic">
+                    <p class="p1"><mat-icon>calendar_month</mat-icon></p>
+                    <p class="p2">{{post.date}}</p>
+                    <p>{{post.text}}</p>
+                    <a routerLink="/post-details/{{post.id}}">
+                        <button class="button-container">
+                            More
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

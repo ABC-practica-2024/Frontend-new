@@ -4,7 +4,5 @@
     <div class="announcement">
         <p>{{post?.description}}</p>
     </div>
-    <div *ngFor="let num of [].constructor(post?.nrImages); let i = index">
-        <img src="../../assets/posts_images/post{{post?.id}}/{{i+1}}.jpg" alt="">
-    </div>
 </div>
+<app-carousel></app-carousel>

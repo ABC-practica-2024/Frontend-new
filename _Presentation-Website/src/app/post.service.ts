@@ -8,6 +8,7 @@ import {BehaviorSubject, Observable, of} from "rxjs";
 export class PostService {
     private posts: Post[] = [];
     private postsSubject = new BehaviorSubject<Post[]>([]);
+    slides: any[] = [];
 
     constructor() {
         // localStorage.clear();
@@ -44,5 +45,14 @@ export class PostService {
 
     getPostById(id: number | null): Post | undefined {
         return this.posts.find(post => post.id === id);
+    }
+
+    getImages(post: Post | null | undefined): any[] {
+        this.slides = [];
+        // @ts-ignore
+        for (let i = 0; i < post?.nrImages; i++) {
+            this.slides.push({ src: `./assets/posts_images/post${post?.id}/${i+1}.jpg` });
+        }
+        return this.slides;
     }
 }

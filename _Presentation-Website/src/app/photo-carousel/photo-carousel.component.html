@@ -1,0 +1,30 @@
+<div class="carousel-container">
+
+    <c-carousel [interval]="0">
+
+        <c-carousel-inner>
+            <c-carousel-item *ngFor="let slide of slides; let i = index" [active]="i === activeSlide">
+                <img [src]="slide.src" class="d-block w-100" loading="lazy"/>
+            </c-carousel-item>
+        </c-carousel-inner>
+
+        <c-carousel-control direction="prev" (click)="goToPreviousSlide()">
+            <span class="carousel-control-icon">&#8249;</span>
+        </c-carousel-control>
+        <c-carousel-control direction="next" (click)="goToNextSlide()">
+            <span class="carousel-control-icon">&#8250;</span>
+        </c-carousel-control>
+
+    </c-carousel><br><br>
+
+    <div class="carousel-indicators">
+            <a
+                class="indicator"
+                *ngFor="let _ of slides; let i = index"
+                [class.active]="i === activeSlide"
+                (click)="setActiveSlide(i)"
+                [attr.aria-current]="i === activeSlide ? 'true' : null">
+            </a>
+    </div>
+
+</div>

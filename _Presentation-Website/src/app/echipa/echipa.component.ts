@@ -26,10 +26,10 @@ export class EchipaComponent implements OnInit {
     constructor(private teamService: TeamService) { }
 
     ngOnInit() {
-        this.organizers$ = this.teamService.getTeamMembersByRole('PM').pipe(
+        this.organizers$ = this.teamService.getTeamMembersByRole('Project Manager').pipe(
             map((data) => data.map((item) => item.name)) // Extract organizer names directly
         );
-        this.members$ = this.teamService.getTeamMembersByRole('membru').pipe(
+        this.members$ = this.teamService.getTeamMembersByRole('Member').pipe(
             map((data) => data.map((item) => item.name)) // Extract member names directly
         );
     }

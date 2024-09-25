@@ -3,12 +3,14 @@ import {Post} from "../post";
 import {ActivatedRoute} from "@angular/router";
 import {PostService} from "../post.service";
 import {NgForOf} from "@angular/common";
+import {PhotoCarouselComponent} from "../photo-carousel/photo-carousel.component";
 
 @Component({
   selector: 'app-post-details',
   standalone: true,
     imports: [
-        NgForOf
+        NgForOf,
+        PhotoCarouselComponent
     ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.css'

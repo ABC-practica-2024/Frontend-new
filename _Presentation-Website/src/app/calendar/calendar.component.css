@@ -1,46 +1,19 @@
-/*.container {*/
-/*    margin-top: 100px;*/
-/*}*/
-
 .title {
     text-align: center;
     font-weight: bold;
     padding-top: 50px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-/*.container::after {
-    content: "";
-    display: block;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-    width: 90vw;
-    max-width: 390vw;
-}*/
 
 .p1, .p2 {
     display: inline-block;
 }
 
-/*tudor, mai jos*/
-
-/*.container {*/
-/*    margin-top: 100px;*/
-/*}*/
-
 .title {
     text-align: center;
     font-weight: bold;
 }
-
-/*.container::after {
-    content: "";
-    display: block;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-    width: 90vw;
-    max-width: 390vw;
-}*/
 
 .p1, .p2 {
     display: inline-block;
@@ -49,17 +22,15 @@
 .announcement {
     width: 90%;
     background-color: #bcd6c3;
-    margin: auto;
     max-width: 800vw;
     border-radius: 10px;
-    margin-bottom: 10px;
-
+    margin: auto auto 10px;
 }
 
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
@@ -68,4 +39,27 @@
 
 .continut {
     padding-left: 10px;
+}
+
+.continut_mai_mic{
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #000;
+}
+
+.button-container {
+    background: linear-gradient(to bottom, #478778, #bcd6c3);
+    border: 1px solid #478778;
+    padding: 4px 8px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+}
+
+.button-container:hover {
+    background: linear-gradient(to top, #478778, #bcd6c3)
 }
