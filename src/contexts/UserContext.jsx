@@ -27,7 +27,7 @@ export function UserContextProvider({ children }) {
         if (localStorageToken) {
             setToken(localStorageToken);
             setUsername("username");
-            setRole("user");
+            setRole("admin");
             setProfilePicture("https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg");
         }
         setIsReady(true);
