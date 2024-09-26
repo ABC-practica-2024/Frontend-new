@@ -8,6 +8,9 @@ import RegisterPage from "../pages/RegisterPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import EnableUserPage from "../pages/EnableUserPage";
 import DashboardPage from "../pages/DashboardPage";
+import AdminLayout from "../layouts/AdminLayout.jsx";
+import ApproveUsersPage from "../pages/adminPages/ApproveUsersPage.jsx";
+import ChatPage from "../pages/userPages/ChatPage.jsx";
 
 const visitorRouter = createBrowserRouter([
     {
@@ -43,6 +46,10 @@ const userRouter = createBrowserRouter([
                 path: "/",
                 element: <DashboardPage />,
             },
+            {
+                path: "/chat",
+                element: <ChatPage />,
+            }
         ],
     },
 ]);
@@ -50,16 +57,12 @@ const userRouter = createBrowserRouter([
 const adminRouter = createBrowserRouter([
     {
         path: "/",
-        element: <RootLayout />, // todo create AdminLayout
+        element: <AdminLayout />,
         children: [
             {
-                path: "/",
-                element: (
-                    <div>
-                        <h1>Admin Dashboard</h1>
-                    </div>
-                ),
-            },
+                path: "/approve-users",
+                element: <ApproveUsersPage />,
+            }
         ],
     },
 ]);

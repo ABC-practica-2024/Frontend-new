@@ -18,7 +18,7 @@ const useFetch = (fetchFn, initialValue, ...params) => {
             }
         };
 
-        fetchData();
+        fetchData().then(r => r);
     }, [fetchFn, params]);
 
     return { data, setData, loading: isLoading, error };
