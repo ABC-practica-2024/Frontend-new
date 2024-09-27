@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+.page-content {
+    padding-top: 20px;
+}
+
+
+.slide {
+    min-width: 100%; /* Each image takes full width */
+    height: 100%; /* Ensure each image takes full height of the container */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    transition: opacity 1s ease-in-out; /* Fade in/out effect */
+    opacity: 0; /* Start with images hidden */
+}
+
+.slide.active {
+    opacity: 1; /* Show active image */
+}
+

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Gabi Mircea",
+        "testimonial": "John Doe is a great team member.",
+        "role": "Project Manager",
+        "team": "Team XYZ",
+        "year_of_study": 3,
+        "specialization": "Project Management"
+    },
+    {
+        "name": "Jane Smith",
+        "testimonial": "Jane Smith is an excellent colleague.",
+        "role": "Member",
+        "team": "Team Beta",
+        "year_of_study": 2,
+        "specialization": "Design"
+    },
+    {
+        "name": "Alex Popescu",
+        "testimonial": "Alex is an outstanding project manager who always delivers on time.",
+        "role": "Project Manager",
+        "team": "Team Gamma",
+        "year_of_study": 4,
+        "specialization": "Agile Management"
+    },
+    {
+        "name": "Maria Georgescu",
+        "testimonial": "Maria is a meticulous project manager who handles tasks efficiently.",
+        "role": "Project Manager",
+        "team": "Team Alpha",
+        "year_of_study": 3,
+        "specialization": "Risk Management"
+    },
+    {
+        "name": "Ion Ionescu",
+        "testimonial": "Ion always brings fresh ideas and works well with the team.",
+        "role": "Member",
+        "team": "Team Beta",
+        "year_of_study": 2,
+        "specialization": "Marketing"
+    },
+    {
+        "name": "Ana Vasilescu",
+        "testimonial": "Ana is a team player who contributes significantly to group projects.",
+        "role": "Member",
+        "team": "Team Delta",
+        "year_of_study": 1,
+        "specialization": "Communications"
+    }
+]

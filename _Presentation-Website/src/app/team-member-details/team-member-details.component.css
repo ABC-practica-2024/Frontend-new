@@ -1,0 +1,83 @@
+.team-details {
+    display: flex;
+    align-items: flex-start;  /* Align items at the start vertically */
+    justify-content: space-between;  /* Distribute space between columns */
+    gap: 30px;
+    height: auto;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align text to the left */
+    max-width: 60%;  /* Increase width */
+    justify-content: flex-start;
+}
+
+.right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;  /* Adjust width */
+}
+
+.image {
+    width: 100%;  /* Increase image size */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #478778;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #478778;
+    font-size: 2em;  /* Increase font size */
+    text-align: left;  /* Align text to the left */
+    font-weight: bold;
+    margin-bottom: 10px;  /* Space between title and paragraphs */
+}
+
+.left-column p {
+    font-size: 1.2em;  /* Increase font size */
+    margin: 5px 0;  /* Space between paragraphs */
+}
+
+.under-text {
+    width: 100%;  /* Make testimonial span the full remaining width */
+    margin-top: 20px;
+    overflow-wrap: break-word;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;  /* Increase max-width */
+    background-color: #bcd6c3;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 200px auto 20px auto;
+    overflow-wrap: break-word;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -70px;
+    min-height: calc(100vh - 60px);  /* Adjust height to match footer's height */
+}

@@ -1,0 +1,95 @@
+.navbar {
+    position: absolute;
+    width: 90vw;
+    max-width: 390vw;
+    --navbar-height: 65px;            /* css variable */
+    height: var(--navbar-height);
+    left: 20px;
+    right: 20px;
+    --navbar-top: 17px;
+    top: var(--navbar-top);
+    margin: 20px auto;
+
+    background: var(--primary-color);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;  /* Spațiu între titlu și meniu */
+    align-items: center;             /* Centrează elementele vertical */
+    padding: 6px 20px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        margin: 20px auto;
+        padding: 8px 20px;
+        left: 9px;
+        right: 9px;
+    }
+}
+
+/* Stiluri pentru lista de meniu */
+.navbar ul {
+    list-style: none;                /* Fără buline pentru lista */
+    display: flex;                   /* Afișează elementele pe orizontală */
+    gap: 27px;                       /* Spațiu între elementele din listă */
+}
+
+/* Stil pentru link-urile de meniu */
+.navbar a {
+    text-decoration: none;           /* Fără linie sub text */
+    color: black;                    /* Culoare albastră */
+    font-weight: 600;                /* Puțin bold */
+    font-size: 16px;                 /* Dimensiune font */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: lightskyblue;                  /* Culoare albă la hover */
+    background-color: transparent;       /* Background albastru închis la hover */
+}
+
+.navbar a:active {
+    background-color: transparent;       /* Even darker blue when active (on click) */
+    color: transparent;                  /* Culoare albă la click */
+}
+
+.navbar ul li {
+    margin-right: 15px;           /* Space between nav items */
+}
+
+
+/* Stil pentru buton */
+.navbar .buton {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .buton:active {
+    background-color: beige;
+}
+
+.mat-icon {
+    font-size: 23px;                 /* Adjust icon size */
+    margin-right: 5px;               /* Space between icon and text */
+}
+
+.abc-text {
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: calc(var(--navbar-height) / 2); /* Calculate line-height based on navbar height */
+    background-color: transparent;
+    border: none;
+}

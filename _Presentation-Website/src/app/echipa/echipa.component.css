@@ -1,0 +1,130 @@
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    font-family: 'Merriweather', serif;
+    color: #478778;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #478778;
+    /*margin-top: -85px;*/
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    color: #478778;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #478778;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 2em; /* Slightly smaller than the main title */
+    border-bottom: 1px dotted #000; /* Border to separate the subtitles */
+}
+
+.team-container {
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+    grid-template-columns: 1fr;
+}
+
+.team-card {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.team-card a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: inherit;
+}
+
+.team-card:hover {
+    background-color: beige;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.member-name {
+    padding-left: 5vw;
+    margin: 0;
+}
+
+.team-organizer {
+    background-color: #e8d1e5;
+}
+
+.team-member {
+    background-color: #d0eaf5;
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .team-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.image {
+    padding-left: 0px;
+    margin-right: 10px;
+    width: 75px;
+    height: 75px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #bcd6c3;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 200px auto 20px auto;
+    overflow-wrap: break-word;
+}
+
+

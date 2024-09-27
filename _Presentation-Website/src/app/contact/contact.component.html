@@ -1,0 +1,33 @@
+<div class="container_general">
+    <div class="main">
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>We <span>&#9829;</span> to dig! Both literally and intellectually!</p>
+            <p>We're an interdisciplinary team that likes to create things with fun, open-minded people.
+            <p>Feel free to share a thought with us!</p>
+            <form (submit)="onSubmit()">
+                <input type="text" name="name" placeholder="Your Name" required [(ngModel)]="name">
+                <input type="email" name="email" placeholder="Email" required [(ngModel)]="email">
+                <textarea name="message" placeholder="Message" required [(ngModel)]="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>Site-ul de arheo...</p>
+                <p>
+                    <!--<mat-icon>location_on</mat-icon>-->
+                    Romania, Cluj-Napoca
+                </p>
+                <p>
+                    <!--<mat-icon>call</mat-icon>-->
+                    (617) 312-2190
+                </p>
+                <p>
+                    <!--<mat-icon>mail</mat-icon>-->
+                    <a href="mailto:test@test.com">test&#64;test.com</a>
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<app-footer></app-footer>

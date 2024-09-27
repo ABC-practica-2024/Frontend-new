@@ -1,0 +1,35 @@
+<div class="container_general">
+    <div class="main">
+        <div class="home-content">
+            <p class="title">Team</p>
+        </div>
+
+        <div class="page-content">
+            <p class="subtitle">Organizers</p>
+        </div>
+
+        <div class="team-container">
+            <div class="team-card team-organizer" *ngFor="let name of organizers$ | async">
+                <a routerLink="/team-member-details/{{name}}">
+                    <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
+                    <p class="member-name">{{name}}</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <p class="subtitle">Students</p>
+        </div>
+
+        <div class="team-container">
+            <div class="team-card team-member" *ngFor="let name of members$ | async">
+                <a routerLink="/team-member-details/{{name}}">
+                    <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
+                    <p class="member-name">{{name}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

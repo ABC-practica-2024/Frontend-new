@@ -1,0 +1,66 @@
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+    /*text-shadow:*/
+    /*    -1px -1px 0 #000,*/
+    /*    1px -1px 0 #000,*/
+    /*    -1px  1px 0 #000,*/
+    /*    1px  1px 0 #000;*/
+    /*background: none;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: #478778;*/
+    margin-top: 45px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.event-date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.event-date p{
+    margin: 0;
+}
+
+.announcement {
+    width: 90%;
+    background-color: #bcd6c3;
+    max-width: 800vw;
+    border-radius: 10px;
+    margin: auto auto 10px;
+}
+
+
+.continut {
+    padding-left: 10px;
+}
+
+.continut_mai_mic{
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #000;
+}
+
+.button-container {
+    background: linear-gradient(to bottom, #478778, #bcd6c3);
+    border: 1px solid #478778;
+    padding: 4px 8px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+}
+
+.button-container:hover {
+    background: linear-gradient(to top, #478778, #bcd6c3)
+}
