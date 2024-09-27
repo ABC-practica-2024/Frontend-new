@@ -12,7 +12,7 @@
     background: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: #478778;
-    margin-top: -85px;
+    /*margin-top: -85px;*/
     margin-bottom: 30px;
     text-decoration: none;
 }

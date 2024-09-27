@@ -8,6 +8,7 @@ import {MatInput} from "@angular/material/input";
 import { MatLabel } from "@angular/material/form-field";
 import {EmailService} from "../email.service";
 import {FormsModule} from "@angular/forms";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-contact',
@@ -20,7 +21,8 @@ import {FormsModule} from "@angular/forms";
         MatFormField,
         MatInput,
         MatLabel,
-        FormsModule
+        FormsModule,
+        FooterComponent
     ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'

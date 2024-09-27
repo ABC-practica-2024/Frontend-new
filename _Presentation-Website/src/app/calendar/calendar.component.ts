@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import {Post} from "../post";
 import {RouterLink} from "@angular/router";
 import {AsyncPipe, NgForOf} from "@angular/common";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-calendar',
@@ -15,7 +16,8 @@ import {AsyncPipe, NgForOf} from "@angular/common";
         MatIcon,
         RouterLink,
         NgForOf,
-        AsyncPipe
+        AsyncPipe,
+        FooterComponent
     ],
   templateUrl: './calendar.component.html',
   styleUrl: './calendar.component.css'

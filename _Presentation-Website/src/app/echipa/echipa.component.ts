@@ -5,6 +5,7 @@ import {RouterLink} from "@angular/router";
 import {TeamService} from "../team.service";
 import {TeamMember} from "../team-member";
 import {filter, map, Observable} from "rxjs";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-echipa',
@@ -14,7 +15,8 @@ import {filter, map, Observable} from "rxjs";
         NgIf,
         NgForOf,
         RouterLink,
-        AsyncPipe
+        AsyncPipe,
+        FooterComponent
     ],
   templateUrl: './echipa.component.html',
   styleUrls: ['../app.component.css', './echipa.component.css']

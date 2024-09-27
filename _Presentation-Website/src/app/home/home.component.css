@@ -1,0 +1,21 @@
+.home-content {
+    padding-top: 120px;
+    padding-left: 65px;
+}
+
+.slideshow {
+    position: relative; /* Allows for absolute positioning of children */
+    max-width: 100%; /* Keep it responsive */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.slideshow-container {
+    display: flex; /* Align images horizontally */
+    position: relative;
+    max-width: 100%; /* Keep it responsive */
+    margin: auto; /* Center it horizontally */
+    overflow: hidden; /* Hide overflowing content */
+    height: 400px; /* Set a specific height for the slideshow */
+    padding-bottom: 15px;
+}
+
