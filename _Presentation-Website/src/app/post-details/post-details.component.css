@@ -1,13 +1,89 @@
+/*.container {*/
+/*    margin-top: 165px;*/
+
+/*}*/
+
+/*.title{*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.5em;*/
+/*    border-bottom: 1px dotted #bcd6c3;*/
+/*}*/
+
+/*.announcement {*/
+/*    width: 75%;*/
+/*    background-color: #bcd6c3;*/
+/*    max-width: 800vw;*/
+/*    border-radius: 10px;*/
+/*    margin: auto auto 10px;*/
+
+/*}*/
 .container {
     margin-top: 165px;
 
 }
 
-.title{
+/*.title{*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.5em;*/
+/*}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'); /* Importă un font mai serios */
+
+.title {
     text-align: center;
     font-weight: bold;
-    font-size: 1.5em;
-    border-bottom: 1px dotted #bcd6c3;
+    font-size: 2.5em;
+    font-family: 'Merriweather', serif;
+    color: #bcd6c3;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #bcd6c3;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.date {
+    font-family: 'Merriweather', serif;
+    color: #bcd6c3;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer {
+    position: relative; /* No longer fixed */
+    width: 100%;
+    color: #333;
+    text-align: left;
+    padding: 10px 0;
+    margin-top: 20px; /* To give space between the content and footer */
+    background-color: #bcd6c3;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.5vw; /* Adaugă padding pentru a păstra indentarea textului */
+}
+
+.left-text, .right-text {
+    flex: 1;
+}
+
+.right-text {
+    text-align: right;
 }
 
 .announcement {

@@ -1,71 +1,83 @@
 .team-details {
-    display: flex;                    /* Flexbox layout */
-    align-items: flex-start;              /* Vertically center the content */
-    justify-content: flex-start;
-    gap: 30px;                        /* Space between the left and right columns */
-    height: auto;        /* Adjust height to account for the top bar height (example 60px) */
+    display: flex;
+    align-items: flex-start;  /* Align items at the start vertically */
+    justify-content: space-between;  /* Distribute space between columns */
+    gap: 30px;
+    height: auto;
     padding-top: 30px;
     flex-wrap: wrap;
 }
 
 .left-column {
-    display: flex;                    /* Flexbox layout for left column */
-    flex-direction: column;           /* Stack image and name vertically */
-    align-items: center;              /* Center the content horizontally */
-    max-width: 200px;                 /* Set maximum width for the left column */
-    justify-content: center;          /* Vertically center content inside left column */
-}
-
-.image {
-    width: 155px;                     /* Make the image rectangular */
-    height: 205px;                    /* Rectangular height */
-    object-fit: cover;                /* Keep the aspect ratio and fill the container */
-    border-radius: 10px;              /* Slightly round corners to make it look better */
-    margin-bottom: 10px;              /* Space between the image and name */
-}
-
-h2 {
-    font-size: 1.5em;                 /* Adjust font size for the name */
-    text-align: center;                 /* Center the name text */
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align text to the left */
+    max-width: 60%;  /* Increase width */
+    justify-content: flex-start;
 }
 
 .right-column {
-    text-align: left;                 /* Align the text to the left */
-    max-width: 500px;                 /* Set maximum width for the testimonial text */
-    flex-direction: column;           /* Stack image and name vertically */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    max-width: 40%;  /* Adjust width */
+}
 
+.image {
+    width: 100%;  /* Increase image size */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #478778;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #478778;
+    font-size: 2em;  /* Increase font size */
+    text-align: left;  /* Align text to the left */
+    font-weight: bold;
+    margin-bottom: 10px;  /* Space between title and paragraphs */
+}
+
+.left-column p {
+    font-size: 1.2em;  /* Increase font size */
+    margin: 5px 0;  /* Space between paragraphs */
 }
 
 .under-text {
-    align-items: flex-start;
-    width: 100%;
-    max-width: 100%;          /* Ensure the under-text spans the full width */
+    width: 100%;  /* Make testimonial span the full remaining width */
     margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     overflow-wrap: break-word;
-    gap: 30px;
-    height: auto;
 }
 
 main {
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;  /* Increase max-width */
     background-color: #bcd6c3;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
     margin: 200px auto 20px auto;
-    overflow-wrap: break-word
+    overflow-wrap: break-word;
 }
 
 .container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
+    margin-top: -70px;
+    min-height: calc(100vh - 60px);  /* Adjust height to match footer's height */
 }

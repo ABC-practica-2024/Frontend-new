@@ -1,28 +1,9 @@
-
 body {
     font-family: Arial, sans-serif;
     color: black;
     padding-top: 98px;
     min-height: 100vh;
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-main {
-    width: 100%;
-    max-width: 800px;
-    background-color: #bcd6c3;
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 100px auto 20px auto;
+    margin-bottom: -150px;
 }
 
 .contact {
@@ -30,8 +11,22 @@ main {
 }
 
 .contact h2 {
+    text-align: center;
+    font-weight: bold;
     font-size: 2.5em;
-    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    color: #478778;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #478778;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-decoration: none;
 }
 
 .contact p span {

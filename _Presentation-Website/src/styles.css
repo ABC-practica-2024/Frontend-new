@@ -1,8 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #629583;
+    --secondary-color: #007bff;
+    --background-color: #f4f4f4;
+    --surface-color: #cfe4dc;
+    --text-color: #26352d;
+}
 
 html, body { }
 body {
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #586b5d;
+    color: var(--text-color);
+    background-color: var(--body-background-color);
 }
+
+.container_general {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.main {
+    width: 100%;
+    /*max-width: 1300px;*/
+    max-width: 90vw;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
 

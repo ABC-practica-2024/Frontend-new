@@ -8,15 +8,16 @@
     right: 20px;
     --navbar-top: 17px;
     top: var(--navbar-top);
-    margin: 20px auto;  /* 'auto' for horizontal centering */
+    margin: 20px auto;
 
-    background: #FFFFFF;
+    background: var(--primary-color);
     border-radius: 20px;
 
     display: flex;
     justify-content: space-between;  /* Spațiu între titlu și meniu */
     align-items: center;             /* Centrează elementele vertical */
     padding: 6px 20px;
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -35,7 +36,7 @@
 .navbar ul {
     list-style: none;                /* Fără buline pentru lista */
     display: flex;                   /* Afișează elementele pe orizontală */
-    gap: 10px;                       /* Spațiu între elementele din listă */
+    gap: 27px;                       /* Spațiu între elementele din listă */
 }
 
 /* Stil pentru link-urile de meniu */
@@ -49,12 +50,12 @@
 
 .navbar a:hover {
     color: lightskyblue;                  /* Culoare albă la hover */
-    background-color: white;       /* Background albastru închis la hover */
+    background-color: transparent;       /* Background albastru închis la hover */
 }
 
 .navbar a:active {
-    background-color: white;       /* Even darker blue when active (on click) */
-    color: white;                  /* Culoare albă la click */
+    background-color: transparent;       /* Even darker blue when active (on click) */
+    color: transparent;                  /* Culoare albă la click */
 }
 
 .navbar ul li {
@@ -72,6 +73,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.navbar .buton:active {
+    background-color: beige;
 }
 
 .mat-icon {

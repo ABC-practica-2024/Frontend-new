@@ -1,8 +1,6 @@
-<app-navbar></app-navbar>
-
-<div class="container">
-    <main>
-        <div class="page-title">
+<div class="container_general">
+    <div class="main">
+        <div class="home-content">
             <p class="title">Team</p>
         </div>
 
@@ -13,7 +11,7 @@
         <div class="team-container">
             <div class="team-card team-organizer" *ngFor="let name of organizers$ | async">
                 <a routerLink="/team-member-details/{{name}}">
-                    <img class="image" src="../../assets/organizers/{{name}}.jpg" alt=name>
+                    <img class="image" src="../../assets/members/{{name}}.jpg" alt=name>
                     <p class="member-name">{{name}}</p>
                 </a>
             </div>
@@ -31,5 +29,5 @@
                 </a>
             </div>
         </div>
-    </main>
+    </div>
 </div>

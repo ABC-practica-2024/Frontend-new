@@ -47,4 +47,8 @@ export class TeamService {
         return of(this.teamMembers.filter(member => member.role === role));
     }
 
+    getAllTeamMembers(): Observable<TeamMember[]> {
+        return of(this.teamMembers);
+    }
+
 }

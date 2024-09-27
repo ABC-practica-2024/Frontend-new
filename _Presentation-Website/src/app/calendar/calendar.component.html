@@ -1,11 +1,13 @@
-<div class="container">
-    <div class="announcement">
+<div class="container_general">
+    <div class="main">
         <p class="title">Title</p>
         <div class="continut">
             <div *ngFor="let post of posts$ | async">
                 <div class="continut_mai_mic">
-                    <p class="p1"><mat-icon>calendar_month</mat-icon></p>
-                    <p class="p2">{{post.date}}</p>
+                    <div class="event-date">
+                        <p class="calendar-icon"><mat-icon>calendar_month</mat-icon></p>
+                        <p class="date">{{post.date}}</p>
+                    </div>
                     <p>{{post.text}}</p>
                     <a routerLink="/post-details/{{post.id}}">
                         <button class="button-container">
@@ -17,4 +19,3 @@
         </div>
     </div>
 </div>
-

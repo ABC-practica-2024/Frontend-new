@@ -4,7 +4,7 @@ import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {TeamService} from "../team.service";
 import {TeamMember} from "../team-member";
-import {map, Observable} from "rxjs";
+import {filter, map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-echipa',
@@ -29,8 +29,9 @@ export class EchipaComponent implements OnInit {
         this.organizers$ = this.teamService.getTeamMembersByRole('Project Manager').pipe(
             map((data) => data.map((item) => item.name)) // Extract organizer names directly
         );
-        this.members$ = this.teamService.getTeamMembersByRole('Member').pipe(
-            map((data) => data.map((item) => item.name)) // Extract member names directly
+        this.members$ = this.teamService.getAllTeamMembers().pipe(
+            map(members => members.filter(member => member.role !== 'Project Manager')),
+            map(filteredMembers => filteredMembers.map(member => member.name)) // Extract member names (non-PMs)
         );
     }
 }
